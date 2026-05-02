@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import ezdxf; doc = ezdxf.readfile\\('test_dxfs/新块.dxf'\\); print\\('OK'\\)\")",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(python3 -c \"import ezdxf; doc = ezdxf.readfile\\('test_dxfs/新块.dxf'\\); print\\('OK'\\)\")",
+      "Bash(python -c \"import ezdxf; doc = ezdxf.readfile\\('test_dxfs/test_block.dxf'\\); print\\('OK'\\)\")",
+      "Bash(python -c \"print\\('hello'\\)\")",
+      "Read(//c/Users/TJADD/AppData/Local/Microsoft/WindowsApps/**)",
+      "Bash(/c/Users/TJADD/AppData/Local/Microsoft/WindowsApps/python.exe --version)",
+      "WebFetch(domain:www.opendesign.com)",
+      "Bash(git add *)"
+    ]
+  }
+}

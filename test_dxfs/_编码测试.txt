@@ -1,0 +1,16 @@
+=== 编码测试报告 ===
+
+方式1: 自动检测编码
+默认 encoding 参数: errors="surrogateescape"
+  127: repr='西红门'
+
+方式2: 指定 encoding=gbk
+  127: repr='西红门'
+
+两种方式读取结果对比:
+  ✅ 完全一致! 自动检测编码正确!
+
+DXF 版本: AC1018
+自动检测的编码: gbk
+文件声明的 : ANSI_936
+结论: ezdxf 自动检测 -> gbk 可以正确读取 GBK 编码的 DXF

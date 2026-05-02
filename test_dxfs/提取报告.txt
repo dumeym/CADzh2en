@@ -1,0 +1,482 @@
+=== CAD 图纸文字提取报告 ===
+
+【模型空间 Modelspace】
+
+  7B: INSERT -> 块引用: 炎黄A3目录
+  125: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "1/1" 
+  126: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "2010.07" 
+  127: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "西红门" [中文]
+  128: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "0306" 
+  129: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "地块回迁房项目" [中文]
+  12A: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "08-01-05-2" 
+  12B: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "1" 
+  12C: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "＃住宅楼" [中文]
+  12D: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "10875" 
+  12E: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "m" 
+  12F: TEXT layer=PUB_TEXT style=_HZTXT
+    text: "2" 
+  130: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  133: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  134: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  135: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  136: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  137: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  138: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  139: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  13A: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  13B: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  13C: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  13D: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  13E: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  13F: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼标准层平面图" [中文]
+  140: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  141: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼首层平面图" [中文]
+  142: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  143: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼地下一层平面图" [中文]
+  144: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  145: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼屋顶平面图" [中文]
+  146: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  147: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  149: TEXT layer=TEXT style=_HZTXT
+    text: "01" 
+  14A: TEXT layer=TEXT style=_HZTXT
+    text: "-" 
+  14C: TEXT layer=TEXT style=_HZTXT
+    text: "26" 
+  14D: TEXT layer=TEXT style=_HZTXT
+    text: "轴立面图" [中文]
+  14E: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  14F: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  151: TEXT layer=TEXT style=_HZTXT
+    text: "26" 
+  152: TEXT layer=TEXT style=_HZTXT
+    text: "-" 
+  154: TEXT layer=TEXT style=_HZTXT
+    text: "01" 
+  155: TEXT layer=TEXT style=_HZTXT
+    text: "轴立面图" [中文]
+  156: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  157: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  159: TEXT layer=TEXT style=_HZTXT
+    text: "A" 
+  15A: TEXT layer=TEXT style=_HZTXT
+    text: "-" 
+  15C: TEXT layer=TEXT style=_HZTXT
+    text: "Q" 
+  15D: TEXT layer=TEXT style=_HZTXT
+    text: "轴立面图" [中文]
+  15E: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  15F: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  160: TEXT layer=TEXT style=_HZTXT
+    text: "1-1" 
+  161: TEXT layer=TEXT style=_HZTXT
+    text: "剖面图" [中文]
+  162: TEXT layer=TEXT style=_HZTXT
+    text: "05" 
+  163: TEXT layer=TEXT style=_HZTXT
+    text: "02" 
+  164: TEXT layer=TEXT style=_HZTXT
+    text: "03" 
+  165: TEXT layer=TEXT style=_HZTXT
+    text: "04" 
+  166: TEXT layer=TEXT style=_HZTXT
+    text: "06" 
+  167: TEXT layer=TEXT style=_HZTXT
+    text: "01" 
+  168: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  169: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  16A: TEXT layer=TEXT style=_HZTXT
+    text: "07" 
+  16B: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  16C: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  16D: TEXT layer=TEXT style=_HZTXT
+    text: "08" 
+  16E: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  16F: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  170: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  171: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼电梯间详图" [中文]
+  172: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  173: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼户型平面详图" [中文]
+  174: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  175: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  176: TEXT layer=TEXT style=_HZTXT
+    text: "2" 
+  177: TEXT layer=TEXT style=_HZTXT
+    text: "＃" 
+  178: TEXT layer=TEXT style=_HZTXT
+    text: "3" 
+  179: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼电梯间详图" [中文]
+  17A: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  17B: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  17D: TEXT layer=TEXT style=_HZTXT
+    text: "Q" 
+  17E: TEXT layer=TEXT style=_HZTXT
+    text: "-" 
+  180: TEXT layer=TEXT style=_HZTXT
+    text: "A" 
+  181: TEXT layer=TEXT style=_HZTXT
+    text: "轴立面图" [中文]
+  182: TEXT layer=TEXT style=_HZTXT
+    text: "建总" [中文]
+  183: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  184: TEXT layer=TEXT style=_HZTXT
+    text: "建筑设计说明（一）" [中文]
+  185: TEXT layer=TEXT style=_HZTXT
+    text: "01" 
+  186: TEXT layer=TEXT style=_HZTXT
+    text: "建总" [中文]
+  187: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  188: TEXT layer=TEXT style=_HZTXT
+    text: "建筑设计说明（二）" [中文]
+  189: TEXT layer=TEXT style=_HZTXT
+    text: "02" 
+  18A: TEXT layer=TEXT style=_HZTXT
+    text: "建总" [中文]
+  18B: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  18C: TEXT layer=TEXT style=_HZTXT
+    text: "总平面图" [中文]
+  18D: TEXT layer=TEXT style=_HZTXT
+    text: "04" 
+  18E: TEXT layer=TEXT style=_HZTXT
+    text: "建总" [中文]
+  18F: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  190: TEXT layer=TEXT style=_HZTXT
+    text: "节能设计专篇" [中文]
+  191: TEXT layer=TEXT style=_HZTXT
+    text: "03" 
+  192: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  193: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  194: TEXT layer=TEXT style=_HZTXT
+    text: "09" 
+  195: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  196: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  197: TEXT layer=TEXT style=_HZTXT
+    text: "墙身详图" [中文]
+  198: TEXT layer=TEXT style=_HZTXT
+    text: "（一）" [中文]
+  199: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  19A: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  19B: TEXT layer=TEXT style=_HZTXT
+    text: "10" 
+  19C: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  19D: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  19E: TEXT layer=TEXT style=_HZTXT
+    text: "墙身详图" [中文]
+  19F: TEXT layer=TEXT style=_HZTXT
+    text: "（二）" [中文]
+  1A0: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  1A1: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  1A2: TEXT layer=TEXT style=_HZTXT
+    text: "12" 
+  1A3: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  1A4: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  1A5: TEXT layer=TEXT style=_HZTXT
+    text: "门窗表及门窗详图" [中文]
+  1A6: TEXT layer=TEXT style=_HZTXT
+    text: "建" [中文]
+  1A7: TEXT layer=TEXT style=_HZTXT
+    text: "1-" 
+  1A8: TEXT layer=TEXT style=_HZTXT
+    text: "11" 
+  1A9: TEXT layer=TEXT style=_HZTXT
+    text: "1" 
+  1AA: TEXT layer=TEXT style=_HZTXT
+    text: "＃楼" [中文]
+  1AB: TEXT layer=TEXT style=_HZTXT
+    text: "墙身详图" [中文]
+  1AC: TEXT layer=TEXT style=_HZTXT
+    text: "（三）" [中文]
+
+【块定义 Blocks】
+
+  Block: 0-dim-mark
+
+  Block: 炎黄A3目录
+    D4: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "页" [中文]
+    D6: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "次：" [中文]
+    D7: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "设" [中文]
+    D8: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "计" [中文]
+    D9: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "日" [中文]
+    DA: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "期：" [中文]
+    DB: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "内" [中文]
+    DC: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "容" [中文]
+    DD: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "摘" [中文]
+    DE: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "要" [中文]
+    DF: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "经" [中文]
+    E0: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "办" [中文]
+    E1: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "人" [中文]
+    E2: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "工" [中文]
+    E3: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "程" [中文]
+    E4: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "主" [中文]
+    E5: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "持" [中文]
+    E6: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "人：" [中文]
+    E7: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "日" [中文]
+    E8: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "期" [中文]
+    E9: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "更改及作废记录" [中文]
+    EA: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "建筑负责人" [中文]
+    EB: TEXT layer=PUB_TEXT style=黑体
+      text: "建筑专业图纸目录" [中文]
+    ED: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "工" [中文]
+    EE: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "程" [中文]
+    EF: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "设" [中文]
+    F0: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "计" [中文]
+    F1: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "图" [中文]
+    F2: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "纸" [中文]
+    F3: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "PROJECT" 
+    F5: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "DESIGN" 
+    F6: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "DRAWINGS" 
+    F7: TEXT layer=PUB_TEXT style=黑体
+      text: "北京炎黄联合国际工程设计有限公司" [中文]
+    F8: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "BEIJING" 
+    F9: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "YANHUANG" 
+    FA: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "INTERNATIONAL" 
+    FB: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "ARCHITECTURE" 
+    FC: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "&" 
+    FD: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "ENGINEERING" 
+    FE: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "CO.,LTD." 
+    FF: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "工" [中文]
+    100: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "程" [中文]
+    101: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "编" [中文]
+    102: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "号" [中文]
+    103: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "工" [中文]
+    104: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "程" [中文]
+    105: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "名" [中文]
+    106: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "称" [中文]
+    107: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "PROJECT" 
+    108: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "NAME" 
+    109: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "PROJECT" 
+    10A: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "NO" 
+    10B: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "建" [中文]
+    10C: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "筑" [中文]
+    10D: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "面" [中文]
+    10E: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "积" [中文]
+    10F: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "项" [中文]
+    110: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "目" [中文]
+    111: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "名" [中文]
+    112: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "称" [中文]
+    113: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "ITEM" 
+    114: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "NAME" 
+    115: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "BUILDING" 
+    116: TEXT layer=PUB_TEXT style=_COMPLEX
+      text: "AREA" 
+    117: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "图" [中文]
+    118: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "号" [中文]
+    119: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "图" [中文]
+    11A: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "名" [中文]
+    11B: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "附" [中文]
+    11C: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "注" [中文]
+    11D: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "图" [中文]
+    11E: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "号" [中文]
+    11F: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "图" [中文]
+    120: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "名" [中文]
+    121: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "附" [中文]
+    122: TEXT layer=PUB_TEXT style=_HZTXT
+      text: "注" [中文]
+
+
+============================================================
+【所有中文字段汇总（含翻译建议）】
+============================================================
+
+原文 (Chinese)                        翻译建议 (English)                                句柄来源                     
+----------------------------------------------------------------------------------------------------
+北京炎黄联合国际工程设计有限公司                                                                  炎黄A3目录/F7                
+＃楼地下一层平面图                                                                         143                      
+建筑设计说明（一）                                                                         184                      
+建筑设计说明（二）                                                                         188                      
+＃楼标准层平面图                                                                          13F                      
+＃楼户型平面详图                                                                          173                      
+门窗表及门窗详图                                                                          1A5                      
+建筑专业图纸目录                                                                          炎黄A3目录/EB                
+地块回迁房项目                                                                           129                      
+＃楼首层平面图                                                                           141                      
+＃楼屋顶平面图                                                                           145                      
+＃楼电梯间详图                                                                           171, 179                 
+更改及作废记录                                                                           炎黄A3目录/E9                
+节能设计专篇                                                                            190                      
+建筑负责人                                                                             炎黄A3目录/EA                
+＃住宅楼                                                                              12C                      
+轴立面图                                                                              14D, 155 ...(+2)         
+总平面图                                General Plan                                  18C                      
+墙身详图                                                                              197, 19E, 1AB            
+西红门                                                                               127                      
+剖面图                                 Section                                       161                      
+（一）                                                                               198                      
+（二）                                                                               19F                      
+（三）                                                                               1AC                      
+＃楼                                                                                147, 14F ...(+9)         
+建总                                                                                182, 186 ...(+2)         
+次：                                                                                炎黄A3目录/D6                
+期：                                                                                炎黄A3目录/DA                
+人：                                                                                炎黄A3目录/E6                
+建                                                                                 130, 134 ...(+11)        
+页                                   Page                                          炎黄A3目录/D4                
+设                                                                                 炎黄A3目录/D7, 炎黄A3目录/EF     
+计                                                                                 炎黄A3目录/D8, 炎黄A3目录/F0     
+日                                                                                 炎黄A3目录/D9, 炎黄A3目录/E7     
+内                                                                                 炎黄A3目录/DB                
+容                                                                                 炎黄A3目录/DC                
+摘                                                                                 炎黄A3目录/DD                
+要                                                                                 炎黄A3目录/DE                
+经                                                                                 炎黄A3目录/DF                
+办                                                                                 炎黄A3目录/E0                
+人                                                                                 炎黄A3目录/E1                
+工                                                                                 炎黄A3目录/E2, 炎黄A3目录/ED ...(+2)
+程                                                                                 炎黄A3目录/E3, 炎黄A3目录/EE ...(+2)
+主                                                                                 炎黄A3目录/E4                
+持                                                                                 炎黄A3目录/E5                
+期                                                                                 炎黄A3目录/E8                
+图                                                                                 炎黄A3目录/F1, 炎黄A3目录/117 ...(+3)
+纸                                                                                 炎黄A3目录/F2                
+编                                                                                 炎黄A3目录/101               
+号                                                                                 炎黄A3目录/102, 炎黄A3目录/118, 炎黄A3目录/11E
+名                                                                                 炎黄A3目录/105, 炎黄A3目录/111 ...(+2)
+称                                                                                 炎黄A3目录/106, 炎黄A3目录/112   
+筑                                                                                 炎黄A3目录/10C               
+面                                                                                 炎黄A3目录/10D               
+积                                                                                 炎黄A3目录/10E               
+项                                                                                 炎黄A3目录/10F               
+目                                                                                 炎黄A3目录/110               
+附                                                                                 炎黄A3目录/11B, 炎黄A3目录/121   
+注                                                                                 炎黄A3目录/11C, 炎黄A3目录/122   
