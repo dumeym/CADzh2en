@@ -11,7 +11,14 @@
       "Bash(/c/Users/TJADD/AppData/Local/Microsoft/WindowsApps/python.exe --version)",
       "WebFetch(domain:www.opendesign.com)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(python -m cad_translator -i \"test_dxfs/新块.dxf\" -t \"test_dxfs/terms.csv\" -o \"test_dxfs/output\" --style-name TONGJI-FONT -v)",
+      "Bash(python -m cad_translator -i \"test_dxfs/新块.dwg\" -t \"test_dxfs/terms.csv\" -o \"test_dxfs/output\" --style-name TONGJI-FONT -v)",
+      "Bash(python -m cad_translator -i \"test_dxfs2/黄山项目测试1.dwg\" -t \"test_dxfs/terms.csv\" -o \"test_dxfs2\" --style-name TONGJI-FONT -v)",
+      "Bash(python -m cad_translator -i \"test_dxfs2/黄山项目测试1.dwg\" -t \"test_dxfs/terms.csv\" -o \"test_dxfs2\" --style-name TONGJI-FONT)",
+      "Bash(/c/Users/TJADD/AppData/Local/Programs/Python/Python312/python -c \"print\\('hello'\\)\")",
+      "Bash(/c/Users/TJADD/AppData/Local/Programs/Python/Python312/python -m cad_translator -i \"test_dxfs2/黄山项目测试1.dwg\" -t \"test_dxfs/terms.csv\" -o \"test_dxfs2\" --style-name TONGJI-FONT)",
+      "Bash(/c/Users/TJADD/AppData/Local/Programs/Python/Python312/python -c ' *)"
     ]
   }
 }

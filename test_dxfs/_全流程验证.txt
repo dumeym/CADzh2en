@@ -1,0 +1,19 @@
+=== 全流程验证报告 ===
+
+1. 文字样式检查:
+   ✅ TONGJI-FONT 存在: font=simplex.shx, width=0.65
+   当前样式: TONGJI-FONT
+
+2. 翻译内容抽查:
+   ✅ handle 127: "Xihongmen" (期望: "Xihongmen")
+   ❌ handle 13F: "＃楼Typical Floor Plan" (期望: "# Bldg. Typical Floor Plan")
+   ✅ handle 14D: "Axis Elevation" (期望: "Axis Elevation")
+
+3. 样式应用抽查:
+   ✅ handle 127: text="Xihongmen", style=TONGJI-FONT
+   ✅ handle 14D: text="Axis Elevation", style=TONGJI-FONT
+   ✅ handle 155: text="Axis Elevation", style=TONGJI-FONT
+
+4. 统计:
+   模型空间实体数: 135
+   样式 TONGJI-FONT 的应用数: 23

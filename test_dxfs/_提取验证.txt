@@ -1,0 +1,225 @@
+提取到 202 个文字实体
+含中文: 111 个
+
+  handle=127 type=TEXT block=''
+    text: 西红门
+  handle=129 type=TEXT block=''
+    text: 地块回迁房项目
+  handle=12C type=TEXT block=''
+    text: ＃住宅楼
+  handle=130 type=TEXT block=''
+    text: 建
+  handle=134 type=TEXT block=''
+    text: 建
+  handle=136 type=TEXT block=''
+    text: 建
+  handle=138 type=TEXT block=''
+    text: 建
+  handle=13A type=TEXT block=''
+    text: 建
+  handle=13C type=TEXT block=''
+    text: 建
+  handle=13F type=TEXT block=''
+    text: ＃楼标准层平面图
+  handle=141 type=TEXT block=''
+    text: ＃楼首层平面图
+  handle=143 type=TEXT block=''
+    text: ＃楼地下一层平面图
+  handle=145 type=TEXT block=''
+    text: ＃楼屋顶平面图
+  handle=147 type=TEXT block=''
+    text: ＃楼
+  handle=14D type=TEXT block=''
+    text: 轴立面图
+  handle=14F type=TEXT block=''
+    text: ＃楼
+  handle=155 type=TEXT block=''
+    text: 轴立面图
+  handle=157 type=TEXT block=''
+    text: ＃楼
+  handle=15D type=TEXT block=''
+    text: 轴立面图
+  handle=15F type=TEXT block=''
+    text: ＃楼
+  handle=161 type=TEXT block=''
+    text: 剖面图
+  handle=168 type=TEXT block=''
+    text: 建
+  handle=16B type=TEXT block=''
+    text: 建
+  handle=16F type=TEXT block=''
+    text: ＃楼
+  handle=171 type=TEXT block=''
+    text: ＃楼电梯间详图
+  handle=173 type=TEXT block=''
+    text: ＃楼户型平面详图
+  handle=175 type=TEXT block=''
+    text: ＃楼
+  handle=179 type=TEXT block=''
+    text: ＃楼电梯间详图
+  handle=17B type=TEXT block=''
+    text: ＃楼
+  handle=181 type=TEXT block=''
+    text: 轴立面图
+  handle=182 type=TEXT block=''
+    text: 建总
+  handle=184 type=TEXT block=''
+    text: 建筑设计说明（一）
+  handle=186 type=TEXT block=''
+    text: 建总
+  handle=188 type=TEXT block=''
+    text: 建筑设计说明（二）
+  handle=18A type=TEXT block=''
+    text: 建总
+  handle=18C type=TEXT block=''
+    text: 总平面图
+  handle=18E type=TEXT block=''
+    text: 建总
+  handle=190 type=TEXT block=''
+    text: 节能设计专篇
+  handle=192 type=TEXT block=''
+    text: 建
+  handle=196 type=TEXT block=''
+    text: ＃楼
+  handle=197 type=TEXT block=''
+    text: 墙身详图
+  handle=198 type=TEXT block=''
+    text: （一）
+  handle=199 type=TEXT block=''
+    text: 建
+  handle=19D type=TEXT block=''
+    text: ＃楼
+  handle=19E type=TEXT block=''
+    text: 墙身详图
+  handle=19F type=TEXT block=''
+    text: （二）
+  handle=1A0 type=TEXT block=''
+    text: 建
+  handle=1A4 type=TEXT block=''
+    text: ＃楼
+  handle=1A5 type=TEXT block=''
+    text: 门窗表及门窗详图
+  handle=1A6 type=TEXT block=''
+    text: 建
+  handle=1AA type=TEXT block=''
+    text: ＃楼
+  handle=1AB type=TEXT block=''
+    text: 墙身详图
+  handle=1AC type=TEXT block=''
+    text: （三）
+  handle=D4 type=TEXT block='炎黄A3目录'
+    text: 页
+  handle=D6 type=TEXT block='炎黄A3目录'
+    text: 次：
+  handle=D7 type=TEXT block='炎黄A3目录'
+    text: 设
+  handle=D8 type=TEXT block='炎黄A3目录'
+    text: 计
+  handle=D9 type=TEXT block='炎黄A3目录'
+    text: 日
+  handle=DA type=TEXT block='炎黄A3目录'
+    text: 期：
+  handle=DB type=TEXT block='炎黄A3目录'
+    text: 内
+  handle=DC type=TEXT block='炎黄A3目录'
+    text: 容
+  handle=DD type=TEXT block='炎黄A3目录'
+    text: 摘
+  handle=DE type=TEXT block='炎黄A3目录'
+    text: 要
+  handle=DF type=TEXT block='炎黄A3目录'
+    text: 经
+  handle=E0 type=TEXT block='炎黄A3目录'
+    text: 办
+  handle=E1 type=TEXT block='炎黄A3目录'
+    text: 人
+  handle=E2 type=TEXT block='炎黄A3目录'
+    text: 工
+  handle=E3 type=TEXT block='炎黄A3目录'
+    text: 程
+  handle=E4 type=TEXT block='炎黄A3目录'
+    text: 主
+  handle=E5 type=TEXT block='炎黄A3目录'
+    text: 持
+  handle=E6 type=TEXT block='炎黄A3目录'
+    text: 人：
+  handle=E7 type=TEXT block='炎黄A3目录'
+    text: 日
+  handle=E8 type=TEXT block='炎黄A3目录'
+    text: 期
+  handle=E9 type=TEXT block='炎黄A3目录'
+    text: 更改及作废记录
+  handle=EA type=TEXT block='炎黄A3目录'
+    text: 建筑负责人
+  handle=EB type=TEXT block='炎黄A3目录'
+    text: 建筑专业图纸目录
+  handle=ED type=TEXT block='炎黄A3目录'
+    text: 工
+  handle=EE type=TEXT block='炎黄A3目录'
+    text: 程
+  handle=EF type=TEXT block='炎黄A3目录'
+    text: 设
+  handle=F0 type=TEXT block='炎黄A3目录'
+    text: 计
+  handle=F1 type=TEXT block='炎黄A3目录'
+    text: 图
+  handle=F2 type=TEXT block='炎黄A3目录'
+    text: 纸
+  handle=F7 type=TEXT block='炎黄A3目录'
+    text: 北京炎黄联合国际工程设计有限公司
+  handle=FF type=TEXT block='炎黄A3目录'
+    text: 工
+  handle=100 type=TEXT block='炎黄A3目录'
+    text: 程
+  handle=101 type=TEXT block='炎黄A3目录'
+    text: 编
+  handle=102 type=TEXT block='炎黄A3目录'
+    text: 号
+  handle=103 type=TEXT block='炎黄A3目录'
+    text: 工
+  handle=104 type=TEXT block='炎黄A3目录'
+    text: 程
+  handle=105 type=TEXT block='炎黄A3目录'
+    text: 名
+  handle=106 type=TEXT block='炎黄A3目录'
+    text: 称
+  handle=10B type=TEXT block='炎黄A3目录'
+    text: 建
+  handle=10C type=TEXT block='炎黄A3目录'
+    text: 筑
+  handle=10D type=TEXT block='炎黄A3目录'
+    text: 面
+  handle=10E type=TEXT block='炎黄A3目录'
+    text: 积
+  handle=10F type=TEXT block='炎黄A3目录'
+    text: 项
+  handle=110 type=TEXT block='炎黄A3目录'
+    text: 目
+  handle=111 type=TEXT block='炎黄A3目录'
+    text: 名
+  handle=112 type=TEXT block='炎黄A3目录'
+    text: 称
+  handle=117 type=TEXT block='炎黄A3目录'
+    text: 图
+  handle=118 type=TEXT block='炎黄A3目录'
+    text: 号
+  handle=119 type=TEXT block='炎黄A3目录'
+    text: 图
+  handle=11A type=TEXT block='炎黄A3目录'
+    text: 名
+  handle=11B type=TEXT block='炎黄A3目录'
+    text: 附
+  handle=11C type=TEXT block='炎黄A3目录'
+    text: 注
+  handle=11D type=TEXT block='炎黄A3目录'
+    text: 图
+  handle=11E type=TEXT block='炎黄A3目录'
+    text: 号
+  handle=11F type=TEXT block='炎黄A3目录'
+    text: 图
+  handle=120 type=TEXT block='炎黄A3目录'
+    text: 名
+  handle=121 type=TEXT block='炎黄A3目录'
+    text: 附
+  handle=122 type=TEXT block='炎黄A3目录'
+    text: 注

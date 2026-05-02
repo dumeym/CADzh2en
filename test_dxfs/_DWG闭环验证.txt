@@ -1,0 +1,14 @@
+=== DWG 闭环验证 ===
+版本: AC1018
+模型空间实体数: 135
+
+样式 TONGJI-FONT: font=simplex.shx, width=0.65 ✅
+
+翻译验证:
+  ✅ "西红门" -> "Xihongmen" (style=TONGJI-FONT)
+  ✅ "轴立面图" -> "Axis Elevation" (style=TONGJI-FONT)
+  ✅ "轴立面图" -> "Axis Elevation" (style=TONGJI-FONT)
+  ✅ "轴立面图" -> "Axis Elevation" (style=TONGJI-FONT)
+  ✅ "轴立面图" -> "Axis Elevation" (style=TONGJI-FONT)
+
+文件大小: 26.1 KB
