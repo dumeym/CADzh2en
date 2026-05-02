@@ -10,7 +10,8 @@
       "Read(//c/Users/TJADD/AppData/Local/Microsoft/WindowsApps/**)",
       "Bash(/c/Users/TJADD/AppData/Local/Microsoft/WindowsApps/python.exe --version)",
       "WebFetch(domain:www.opendesign.com)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
