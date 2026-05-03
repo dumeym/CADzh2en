@@ -233,6 +233,115 @@ class BaiduTranslator(BaseTranslatorAPI):
         return None
 
 
+# ---- 硅基流动 LLM 翻译（OpenAI 兼容接口） ----
+
+
+class SiliconFlowTranslator(BaseTranslatorAPI):
+    """硅基流动 LLM 翻译，OpenAI 兼容接口.
+
+    文档：https://docs.siliconflow.cn/cn/api-reference/chat-completions/chat-completions
+    模型参考：https://cloud.siliconflow.cn/models
+    """
+
+    name = "siliconflow"
+
+    def __init__(
+        self,
+        api_key: str,
+        model: str = "Qwen/Qwen3.5-9B",
+        base_url: str = "https://api.siliconflow.cn/v1",
+        temperature: float = 0.3,
+        max_tokens: int = 4096,
+    ):
+        self.api_key = api_key
+        self.model = model
+        self.base_url = base_url.rstrip("/")
+        self.temperature = temperature
+        self.max_tokens = max_tokens
+
+    def translate(self, text: str, max_retries: int = 3) -> Optional[str]:
+        """调用 SiliconFlow Chat Completions API 翻译."""
+        system_prompt = (
+            "You are a professional engineering translator. "
+            "Translate the following Chinese text to English. "
+            "Keep technical terms accurate and natural. "
+            "Only output the translation, do not include any explanation or notes."
+        )
+
+        payload = {
+            "model": self.model,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": text},
+            ],
+            "temperature": self.temperature,
+            "max_tokens": self.max_tokens,
+        }
+
+        url = f"{self.base_url}/chat/completions"
+        data_bytes = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+
+        for attempt in range(max_retries):
+            try:
+                req = urllib.request.Request(
+                    url,
+                    data=data_bytes,
+                    headers={
+                        "Authorization": f"Bearer {self.api_key}",
+                        "Content-Type": "application/json; charset=utf-8",
+                    },
+                )
+                with urllib.request.urlopen(req, timeout=30) as resp:
+                    body = json.loads(resp.read().decode("utf-8"))
+
+                if "choices" in body and body["choices"]:
+                    content = body["choices"][0].get("message", {}).get("content", "")
+                    if content:
+                        return content.strip()
+
+                logger.warning(
+                    f"SiliconFlow API 返回异常: {json.dumps(body, ensure_ascii=False)[:200]}"
+                )
+                return None
+
+            except urllib.error.HTTPError as e:
+                try:
+                    err_body = e.read().decode("utf-8")
+                    err_detail = json.loads(err_body)
+                    err_msg = err_detail.get("error", {}).get("message", err_body)
+                except Exception:
+                    err_msg = str(e)
+
+                if attempt < max_retries - 1:
+                    wait = 2 ** attempt
+                    logger.warning(
+                        f"SiliconFlow API HTTP {e.code} ({attempt+1}/{max_retries}): "
+                        f"{err_msg}，等待 {wait}s 重试"
+                    )
+                    time.sleep(wait)
+                else:
+                    logger.error(
+                        f"SiliconFlow API HTTP {e.code} 已达最大重试次数: {err_msg}"
+                    )
+                    return None
+
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    wait = 2 ** attempt
+                    logger.warning(
+                        f"SiliconFlow 请求异常 ({attempt+1}/{max_retries}): {e}，"
+                        f"等待 {wait}s 重试"
+                    )
+                    time.sleep(wait)
+                else:
+                    logger.error(
+                        f"SiliconFlow 请求异常已达最大重试次数: {e}"
+                    )
+                    return None
+
+        return None
+
+
 # ---- 空翻译（仅术语表，无 API） ----
 
 
@@ -272,12 +381,28 @@ class TranslatorEngine:
         api_type: str = "null",
         baidu_appid: str = "",
         baidu_secret: str = "",
+        siliconflow_api_key: str = "",
+        siliconflow_model: str = "Qwen/Qwen3.5-9B",
     ) -> "TranslatorEngine":
-        """从配置创建翻译引擎."""
+        """从配置创建翻译引擎.
+
+        Args:
+            term_file: CSV 术语表路径.
+            api_type: API 类型 ("null", "baidu", "siliconflow").
+            baidu_appid: 百度翻译 appid.
+            baidu_secret: 百度翻译 secret key.
+            siliconflow_api_key: 硅基流动 API key.
+            siliconflow_model: 硅基流动模型名.
+        """
         term_table = TermTable(term_file) if term_file else None
 
         if api_type == "baidu" and baidu_appid and baidu_secret:
             api = BaiduTranslator(baidu_appid, baidu_secret)
+        elif api_type == "siliconflow" and siliconflow_api_key:
+            api = SiliconFlowTranslator(
+                api_key=siliconflow_api_key,
+                model=siliconflow_model,
+            )
         else:
             api = NullTranslator()
 

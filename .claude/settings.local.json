@@ -18,7 +18,16 @@
       "Bash(python -m cad_translator -i \"test_dxfs2/黄山项目测试1.dwg\" -t \"test_dxfs/terms.csv\" -o \"test_dxfs2\" --style-name TONGJI-FONT)",
       "Bash(/c/Users/TJADD/AppData/Local/Programs/Python/Python312/python -c \"print\\('hello'\\)\")",
       "Bash(/c/Users/TJADD/AppData/Local/Programs/Python/Python312/python -m cad_translator -i \"test_dxfs2/黄山项目测试1.dwg\" -t \"test_dxfs/terms.csv\" -o \"test_dxfs2\" --style-name TONGJI-FONT)",
-      "Bash(/c/Users/TJADD/AppData/Local/Programs/Python/Python312/python -c ' *)"
+      "Bash(/c/Users/TJADD/AppData/Local/Programs/Python/Python312/python -c ' *)",
+      "WebFetch(domain:docs.siliconflow.cn)",
+      "Bash(python -c \"import py_compile; py_compile.compile\\('cad_translator/translator.py', doraise=True\\); print\\('translator.py OK'\\)\")",
+      "Bash(python -c \"import py_compile; py_compile.compile\\('cad_translator/__main__.py', doraise=True\\); print\\('__main__.py OK'\\)\")",
+      "Bash(python -c \"import py_compile; py_compile.compile\\('cad_translator/translator.py', doraise=True\\); print\\('OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('cad_translator/translator.py', encoding='utf-8'\\).read\\(\\)\\); print\\('translator.py: syntax OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('cad_translator/__main__.py', encoding='utf-8'\\).read\\(\\)\\); print\\('__main__.py: syntax OK'\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('d:/MyCodingProjects/ezdxf/cad_translator/translator.py', encoding='utf-8'\\).read\\(\\)\\); print\\('translator.py OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('d:/MyCodingProjects/ezdxf/cad_translator/translator.py', encoding='utf-8'\\).read\\(\\)\\); print\\('translator.py: syntax OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('d:/MyCodingProjects/ezdxf/cad_translator/__main__.py', encoding='utf-8'\\).read\\(\\)\\); print\\('__main__.py: syntax OK'\\)\")"
     ]
   }
 }

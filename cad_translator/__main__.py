@@ -25,7 +25,13 @@ from . import __version__
 from .converter import is_odafc_installed, dwg_to_dxf, dxf_to_dwg, read_dxf
 from .extractor import extract_texts, filter_chinese_texts
 from .style import create_english_style, DEFAULT_STYLE_NAME, DEFAULT_FONT, DEFAULT_WIDTH
-from .translator import TermTable, TranslatorEngine
+from .translator import (
+    TermTable,
+    TranslatorEngine,
+    BaiduTranslator,
+    SiliconFlowTranslator,
+    NullTranslator,
+)
 from .backfill import backfill
 
 
@@ -102,7 +108,7 @@ def build_parser() -> argparse.ArgumentParser:
     # API 配置
     parser.add_argument(
         "--api",
-        choices=["null", "baidu"],
+        choices=["null", "baidu", "siliconflow"],
         default="null",
         help="翻译 API 类型（默认: null=仅术语表）",
     )
@@ -113,6 +119,15 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--baidu-secret",
         help="百度翻译 API secret key",
+    )
+    parser.add_argument(
+        "--siliconflow-key",
+        help="硅基流动 API key（也可通过 SILICONFLOW_API_KEY 环境变量设置）",
+    )
+    parser.add_argument(
+        "--siliconflow-model",
+        default="Qwen/Qwen3.5-9B",
+        help="硅基流动模型名（默认: Qwen/Qwen3.5-9B）",
     )
 
     # 其他
@@ -146,6 +161,8 @@ def process_file(
     api_type: str = "null",
     baidu_appid: str = "",
     baidu_secret: str = "",
+    siliconflow_api_key: str = "",
+    siliconflow_model: str = "Qwen/Qwen3.5-9B",
     skip_odafc: bool = False,
 ) -> dict:
     """处理单个文件."""
@@ -196,7 +213,18 @@ def process_file(
     logger.info(f"发现 {len(chinese_texts)} 个含中文的文字实体")
 
     # Step 3: 翻译
-    engine = TranslatorEngine(term_table=term_table)
+    # 根据 API 类型构建翻译器
+    if api_type == "baidu" and baidu_appid and baidu_secret:
+        api = BaiduTranslator(baidu_appid, baidu_secret)
+    elif api_type == "siliconflow" and siliconflow_api_key:
+        api = SiliconFlowTranslator(
+            api_key=siliconflow_api_key,
+            model=siliconflow_model,
+        )
+    else:
+        api = NullTranslator()
+
+    engine = TranslatorEngine(term_table=term_table, api=api)
 
     # 收集需要翻译的原文
     texts_to_translate = list(set(te.text for te in chinese_texts))
@@ -269,6 +297,8 @@ def process_directory(
     api_type: str = "null",
     baidu_appid: str = "",
     baidu_secret: str = "",
+    siliconflow_api_key: str = "",
+    siliconflow_model: str = "Qwen/Qwen3.5-9B",
     skip_odafc: bool = False,
 ) -> list[dict]:
     """批量处理目录下的所有图纸."""
@@ -297,6 +327,8 @@ def process_directory(
             api_type,
             baidu_appid,
             baidu_secret,
+            siliconflow_api_key,
+            siliconflow_model,
             skip_odafc,
         )
         results.append(result)
@@ -308,6 +340,9 @@ def main() -> None:
     """主入口."""
     parser = build_parser()
     args = parser.parse_args()
+
+    # 从环境变量读取 SiliconFlow API key（CLI 参数优先级更高）
+    siliconflow_api_key = args.siliconflow_key or os.environ.get("SILICONFLOW_API_KEY", "")
 
     setup_logging(args.verbose)
     logger = logging.getLogger("cad_translator")
@@ -336,6 +371,8 @@ def main() -> None:
             args.api,
             args.baidu_appid,
             args.baidu_secret,
+            siliconflow_api_key,
+            args.siliconflow_model,
             args.skip_odafc,
         )
     else:
@@ -351,6 +388,8 @@ def main() -> None:
                 args.api,
                 args.baidu_appid,
                 args.baidu_secret,
+                siliconflow_api_key,
+                args.siliconflow_model,
                 args.skip_odafc,
             )
         ]

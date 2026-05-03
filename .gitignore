@@ -15,3 +15,4 @@ fonts/shapefiles
 profiling/logs
 venv
 wheels
+.env
