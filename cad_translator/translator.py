@@ -54,6 +54,9 @@ class TermTable:
                     continue
                 cn = row[0].strip()
                 en = row[1].strip()
+                # 跳过标题行
+                if cn in ("中文", "Chinese", "原文", "") or en in ("英文", "English", "译文", ""):
+                    continue
                 if cn and en and cn != en:
                     self._pairs.append((cn, en))
 
@@ -372,6 +375,147 @@ class NullTranslator(BaseTranslatorAPI):
         return text
 
 
+# ---- 百度云翻译 API（MT，aip.baidubce.com） ----
+
+
+class BaiduCloudTranslator(BaseTranslatorAPI):
+    """百度云翻译 MT API (aip.baidubce.com).
+
+    使用 OAuth2 access_token 认证，单次请求最大 6000 字符。
+    文档：https://ai.baidu.com/ai-doc/MT/4kqryjku9
+    控制台：https://console.bce.baidu.com/ai/#/ai/machinetranslation/overview
+    """
+
+    name = "baidu_cloud"
+
+    def __init__(self, api_key: str, secret_key: str, app_id: str = ""):
+        self.api_key = api_key
+        self.secret_key = secret_key
+        self.app_id = app_id
+        self._token_url = "https://aip.baidubce.com/oauth/2.0/token"
+        self._api_url = "https://aip.baidubce.com/rpc/2.0/mt/texttrans/v1"
+        self._access_token: Optional[str] = None
+        self._token_expiry: float = 0
+        self._token_failed: bool = False
+
+    def _get_access_token(self) -> Optional[str]:
+        """获取 OAuth2 access_token，带缓存."""
+        if self._access_token and time.time() < self._token_expiry:
+            return self._access_token
+        if self._token_failed:
+            return None
+
+        params = urllib.parse.urlencode({
+            "grant_type": "client_credentials",
+            "client_id": self.api_key,
+            "client_secret": self.secret_key,
+        })
+        url = f"{self._token_url}?{params}"
+
+        try:
+            req = urllib.request.Request(url)
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+
+            if "access_token" in data:
+                self._access_token = data["access_token"]
+                expires_in = data.get("expires_in", 2592000)
+                self._token_expiry = time.time() + expires_in - 300  # 提前 5 分钟
+                logger.info("百度云 access_token 获取成功")
+                return self._access_token
+            else:
+                error_desc = data.get("error_description",
+                                       data.get("error", "未知错误"))
+                logger.error(f"百度云 token 获取失败: {error_desc}")
+                self._token_failed = True
+                return None
+        except Exception as e:
+            logger.error(f"百度云 token 请求异常: {e}")
+            self._token_failed = True
+            return None
+
+    def _translate_segment(
+        self, text: str, token: str, max_retries: int
+    ) -> Optional[str]:
+        """翻译单段文本（<=6000 字符）。"""
+        payload = {"q": text, "from": "zh", "to": "en"}
+        url = f"{self._api_url}?access_token={token}"
+        data_bytes = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+
+        for attempt in range(max_retries):
+            try:
+                req = urllib.request.Request(
+                    url,
+                    data=data_bytes,
+                    headers={"Content-Type": "application/json; charset=utf-8"},
+                )
+                with urllib.request.urlopen(req, timeout=15) as resp:
+                    body = json.loads(resp.read().decode("utf-8"))
+
+                if "result" in body and "trans_result" in body["result"]:
+                    parts = [item["dst"] for item in body["result"]["trans_result"]]
+                    return "\n".join(parts)
+
+                error_code = body.get("error_code", "")
+                error_msg = body.get("error_msg", "未知错误")
+                # token 过期，尝试刷新
+                if error_code in ("110", "111"):
+                    logger.warning("百度云 token 过期，重新获取")
+                    self._access_token = None
+                    self._token_expiry = 0
+                    new_token = self._get_access_token()
+                    if new_token:
+                        url = f"{self._api_url}?access_token={new_token}"
+                        continue
+                logger.warning(f"百度云 API 错误 [{error_code}]: {error_msg}")
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)
+                else:
+                    return None
+
+            except urllib.error.HTTPError as e:
+                if e.code in (401, 403):
+                    self._access_token = None
+                    self._token_expiry = 0
+                    new_token = self._get_access_token()
+                    if new_token:
+                        url = f"{self._api_url}?access_token={new_token}"
+                        continue
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)
+                else:
+                    return None
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)
+                else:
+                    return None
+        return None
+
+    def translate(self, text: str, max_retries: int = 3) -> Optional[str]:
+        """调用百度云 MT API 翻译。"""
+        token = self._get_access_token()
+        if token is None:
+            return None
+
+        if len(text) > 6000:
+            return self._translate_long(text, token, max_retries)
+        return self._translate_segment(text, token, max_retries)
+
+    def _translate_long(
+        self, text: str, token: str, max_retries: int
+    ) -> Optional[str]:
+        """将长文本按 6000 字符分段翻译。"""
+        segments: list[str] = []
+        for i in range(0, len(text), 6000):
+            seg = text[i:i + 6000]
+            result = self._translate_segment(seg, token, max_retries)
+            if result is None:
+                return None
+            segments.append(result)
+        return "\n".join(segments)
+
+
 # ---- 组合翻译引擎 ----
 
 
@@ -392,38 +536,61 @@ class TranslatorEngine:
             "total": 0,
         }
 
+    @staticmethod
+    def create_api(
+        api_type: str = "null",
+        baidu_api_key: str = "",
+        baidu_secret_key: str = "",
+        baidu_app_id: str = "",
+        siliconflow_api_key: str = "",
+        siliconflow_model: str = "Qwen/Qwen3.5-9B",
+    ) -> BaseTranslatorAPI:
+        """根据配置创建翻译 API 实例（不含术语表）."""
+        if api_type == "baidu" and baidu_api_key and baidu_secret_key:
+            return BaiduCloudTranslator(baidu_api_key, baidu_secret_key, baidu_app_id)
+        elif api_type == "siliconflow" and siliconflow_api_key:
+            return SiliconFlowTranslator(
+                api_key=siliconflow_api_key,
+                model=siliconflow_model,
+            )
+        else:
+            return NullTranslator()
+
     @classmethod
     def from_config(
         cls,
         term_file: Optional[str] = None,
         api_type: str = "null",
-        baidu_appid: str = "",
-        baidu_secret: str = "",
+        baidu_api_key: str = "",
+        baidu_secret_key: str = "",
+        baidu_app_id: str = "",
         siliconflow_api_key: str = "",
         siliconflow_model: str = "Qwen/Qwen3.5-9B",
+        term_table: Optional[TermTable] = None,
     ) -> "TranslatorEngine":
         """从配置创建翻译引擎.
 
         Args:
-            term_file: CSV 术语表路径.
+            term_file: CSV 术语表路径（与 term_table 二选一）.
             api_type: API 类型 ("null", "baidu", "siliconflow").
-            baidu_appid: 百度翻译 appid.
-            baidu_secret: 百度翻译 secret key.
+            baidu_api_key: 百度云 API Key.
+            baidu_secret_key: 百度云 Secret Key.
+            baidu_app_id: 百度云 App ID（仅日志）.
             siliconflow_api_key: 硅基流动 API key.
             siliconflow_model: 硅基流动模型名.
+            term_table: 已加载的术语表实例（与 term_file 二选一）.
         """
-        term_table = TermTable(term_file) if term_file else None
+        if term_table is None:
+            term_table = TermTable(term_file) if term_file else None
 
-        if api_type == "baidu" and baidu_appid and baidu_secret:
-            api = BaiduTranslator(baidu_appid, baidu_secret)
-        elif api_type == "siliconflow" and siliconflow_api_key:
-            api = SiliconFlowTranslator(
-                api_key=siliconflow_api_key,
-                model=siliconflow_model,
-            )
-        else:
-            api = NullTranslator()
-
+        api = cls.create_api(
+            api_type=api_type,
+            baidu_api_key=baidu_api_key,
+            baidu_secret_key=baidu_secret_key,
+            baidu_app_id=baidu_app_id,
+            siliconflow_api_key=siliconflow_api_key,
+            siliconflow_model=siliconflow_model,
+        )
         return cls(term_table=term_table, api=api)
 
     @property

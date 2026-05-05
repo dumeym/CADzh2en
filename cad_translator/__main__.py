@@ -15,11 +15,14 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import logging
 import os
 import sys
 import time
 from pathlib import Path
+
+from dotenv import load_dotenv
 
 from . import __version__
 from .converter import is_odafc_installed, dwg_to_dxf, dxf_to_dwg, read_dxf
@@ -28,7 +31,7 @@ from .style import create_english_style, DEFAULT_STYLE_NAME, DEFAULT_FONT, DEFAU
 from .translator import (
     TermTable,
     TranslatorEngine,
-    BaiduTranslator,
+    BaiduCloudTranslator,
     SiliconFlowTranslator,
     NullTranslator,
 )
@@ -113,12 +116,17 @@ def build_parser() -> argparse.ArgumentParser:
         help="翻译 API 类型（默认: null=仅术语表）",
     )
     parser.add_argument(
-        "--baidu-appid",
-        help="百度翻译 API appid",
+        "--baidu-api-key",
+        help="百度云翻译 API Key（也可通过 BAIDU_API_KEY 环境变量设置）",
     )
     parser.add_argument(
-        "--baidu-secret",
-        help="百度翻译 API secret key",
+        "--baidu-secret-key",
+        help="百度云翻译 Secret Key（也可通过 BAIDU_SECRET_KEY 环境变量设置）",
+    )
+    parser.add_argument(
+        "--baidu-app-id",
+        default="",
+        help="百度云翻译 App ID（仅用于日志记录）",
     )
     parser.add_argument(
         "--siliconflow-key",
@@ -131,6 +139,11 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     # 其他
+    parser.add_argument(
+        "--from-csv",
+        default="",
+        help="从 CSV 文件读取翻译对进行回填（跳过 API 翻译）",
+    )
     parser.add_argument(
         "--skip-odafc",
         action="store_true",
@@ -150,6 +163,42 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
+def _save_translation_csv(
+    input_stem: str,
+    chinese_texts: list,
+    translations: dict[str, "TranslationResult"],
+) -> str:
+    """将翻译结果保存为 CSV 文件.
+
+    Args:
+        input_stem: 输入文件名（不含扩展名）.
+        chinese_texts: 中文文字实体列表.
+        translations: {原文: TranslationResult} 字典.
+
+    Returns:
+        CSV 文件路径.
+    """
+    progress_dir = Path("test_progress")
+    progress_dir.mkdir(parents=True, exist_ok=True)
+    csv_path = str(progress_dir / f"{input_stem}_TEXT.csv")
+
+    # 构建 {原文: 最佳译文} 映射，优先 term_table > api > untranslated
+    result_map: dict[str, tuple[str, str]] = {}
+    for orig, tr in translations.items():
+        result_map[orig] = (tr.translated, tr.source)
+
+    with open(csv_path, "w", encoding="utf-8-sig", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["handle", "original", "translated", "source"])
+        for te in chinese_texts:
+            translated, source = result_map.get(te.text, (te.text, "untranslated"))
+            writer.writerow([te.handle, te.text, translated, source])
+
+    logger = logging.getLogger("cad_translator")
+    logger.info(f"翻译记录已写入: {csv_path}")
+    return csv_path
+
+
 def process_file(
     input_path: str,
     output_dir: str,
@@ -159,11 +208,13 @@ def process_file(
     style_width: float,
     mode: str,
     api_type: str = "null",
-    baidu_appid: str = "",
-    baidu_secret: str = "",
+    baidu_api_key: str = "",
+    baidu_secret_key: str = "",
+    baidu_app_id: str = "",
     siliconflow_api_key: str = "",
     siliconflow_model: str = "Qwen/Qwen3.5-9B",
     skip_odafc: bool = False,
+    from_csv: str = "",
 ) -> dict:
     """处理单个文件."""
     result = {
@@ -212,56 +263,75 @@ def process_file(
 
     logger.info(f"发现 {len(chinese_texts)} 个含中文的文字实体")
 
-    # Step 3: 翻译
-    # 根据 API 类型构建翻译器
-    if api_type == "baidu" and baidu_appid and baidu_secret:
-        api = BaiduTranslator(baidu_appid, baidu_secret)
-    elif api_type == "siliconflow" and siliconflow_api_key:
-        api = SiliconFlowTranslator(
-            api_key=siliconflow_api_key,
-            model=siliconflow_model,
-        )
+    # Step 3: 翻译或从 CSV 读取
+    if from_csv:
+        # 从 CSV 读取翻译，跳过 API 翻译
+        logger.info(f"从 CSV 读取翻译: {from_csv}")
+        translations = {}
+        with open(from_csv, "r", encoding="utf-8-sig") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                orig = row.get("original", "").strip()
+                trans = row.get("translated", "").strip()
+                if orig and trans:
+                    translations[orig] = trans
+        result["translated_count"] = len(translations)
+        csv_path = from_csv
     else:
-        api = NullTranslator()
+        # 根据 API 类型构建翻译器
+        api = TranslatorEngine.create_api(
+            api_type=api_type,
+            baidu_api_key=baidu_api_key,
+            baidu_secret_key=baidu_secret_key,
+            baidu_app_id=baidu_app_id,
+            siliconflow_api_key=siliconflow_api_key,
+            siliconflow_model=siliconflow_model,
+        )
+        engine = TranslatorEngine(term_table=term_table, api=api)
 
-    engine = TranslatorEngine(term_table=term_table, api=api)
+        # 收集需要翻译的原文
+        texts_to_translate = list(set(te.text for te in chinese_texts))
+        logger.info(f"待翻译的唯一文本: {len(texts_to_translate)} 条")
 
-    # 收集需要翻译的原文
-    texts_to_translate = list(set(te.text for te in chinese_texts))
-    logger.info(f"待翻译的唯一文本: {len(texts_to_translate)} 条")
+        trans_results = engine.translate_batch(texts_to_translate)
+        trans_map = {
+            t.original: t.translated
+            for t in trans_results.values()
+            if t.success and t.source != "untranslated"
+        }
 
-    translations = engine.translate_batch(texts_to_translate)
-    trans_map = {
-        t.original: t.translated
-        for t in translations.values()
-        if t.success and t.source != "untranslated"
-    }
+        untranslated = [
+            t.original
+            for t in trans_results.values()
+            if not t.success or t.translated == t.original
+        ]
+        if untranslated:
+            logger.warning(f"未翻译的文本: {len(untranslated)} 条")
+            for t in untranslated[:5]:
+                logger.warning(f"  [NOT_TRANSLATED] {t}")
 
-    untranslated = [
-        t.original
-        for t in translations.values()
-        if not t.success or t.translated == t.original
-    ]
-    if untranslated:
-        logger.warning(f"未翻译的文本: {len(untranslated)} 条")
-        for t in untranslated[:5]:
-            logger.warning(f"  [NOT_TRANSLATED] {t}")
+        result["translated_count"] = len(trans_map)
 
-    result["translated_count"] = len(trans_map)
+        if not trans_map:
+            logger.info("没有需要翻译的内容")
+            return result
 
-    if not trans_map:
-        logger.info("没有需要翻译的内容")
-        return result
+        # Step 4: 写入翻译对 CSV
+        csv_path = _save_translation_csv(src.stem, chinese_texts, trans_results)
 
-    # Step 4: 创建英文样式
+    # Step 5: 创建英文样式
     logger.info(f"创建文字样式 '{style_name}' (font={style_font}, width={style_width})")
     create_english_style(doc, style_name=style_name, font=style_font, width=style_width)
 
-    # Step 5: 回填译文
-    filled = backfill(doc, chinese_texts, trans_map, style_name, mode)
+    # Step 6: 回填译文
+    if from_csv:
+        from .backfill import backfill_from_csv
+        filled = backfill_from_csv(doc, chinese_texts, csv_path, style_name, mode)
+    else:
+        filled = backfill(doc, chinese_texts, trans_map, style_name, mode)
     logger.info(f"回填译文: {filled}/{result['chinese_count']} 个实体")
 
-    # Step 6: 保存
+    # Step 7: 保存
     if mode == "replace":
         out_filename = src.stem + "_EN"
     else:
@@ -295,11 +365,13 @@ def process_directory(
     style_width: float,
     mode: str,
     api_type: str = "null",
-    baidu_appid: str = "",
-    baidu_secret: str = "",
+    baidu_api_key: str = "",
+    baidu_secret_key: str = "",
+    baidu_app_id: str = "",
     siliconflow_api_key: str = "",
     siliconflow_model: str = "Qwen/Qwen3.5-9B",
     skip_odafc: bool = False,
+    from_csv: str = "",
 ) -> list[dict]:
     """批量处理目录下的所有图纸."""
     results = []
@@ -325,11 +397,13 @@ def process_directory(
             style_width,
             mode,
             api_type,
-            baidu_appid,
-            baidu_secret,
+            baidu_api_key,
+            baidu_secret_key,
+            baidu_app_id,
             siliconflow_api_key,
             siliconflow_model,
             skip_odafc,
+            from_csv,
         )
         results.append(result)
 
@@ -338,11 +412,16 @@ def process_directory(
 
 def main() -> None:
     """主入口."""
+    load_dotenv()
     parser = build_parser()
     args = parser.parse_args()
 
-    # 从环境变量读取 SiliconFlow API key（CLI 参数优先级更高）
+    # 从环境变量读取 API key（CLI 参数优先级更高）
+    baidu_api_key = args.baidu_api_key or os.environ.get("BAIDU_API_KEY", "")
+    baidu_secret_key = args.baidu_secret_key or os.environ.get("BAIDU_SECRET_KEY", "")
+    baidu_app_id = args.baidu_app_id or os.environ.get("BAIDU_APP_ID", "")
     siliconflow_api_key = args.siliconflow_key or os.environ.get("SILICONFLOW_API_KEY", "")
+    from_csv = args.from_csv
 
     setup_logging(args.verbose)
     logger = logging.getLogger("cad_translator")
@@ -369,11 +448,13 @@ def main() -> None:
             args.style_width,
             args.mode,
             args.api,
-            args.baidu_appid,
-            args.baidu_secret,
+            baidu_api_key,
+            baidu_secret_key,
+            baidu_app_id,
             siliconflow_api_key,
             args.siliconflow_model,
             args.skip_odafc,
+            from_csv,
         )
     else:
         results = [
@@ -386,11 +467,13 @@ def main() -> None:
                 args.style_width,
                 args.mode,
                 args.api,
-                args.baidu_appid,
-                args.baidu_secret,
+                baidu_api_key,
+                baidu_secret_key,
+                baidu_app_id,
                 siliconflow_api_key,
                 args.siliconflow_model,
                 args.skip_odafc,
+                from_csv,
             )
         ]
 
