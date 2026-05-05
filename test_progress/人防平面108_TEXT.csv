@@ -1,0 +1,221 @@
+﻿handle,original,translated,source
+DD,2 定位尺寸见建筑平面图,2. See the building plan for the positioning dimensions,baidu_cloud
+DE,说明：,Explanation:,baidu_cloud
+DF,1 图中:,In Figure 1:,baidu_cloud
+E3,表示临空墙,Indicate the overhanging wall,baidu_cloud
+E4,表示抗爆隔墙,Indicate blast resistant partition wall,baidu_cloud
+E5,3 人防区域梁板布置、柱、外墙配筋另详,"The layout of beams and slabs, columns, and reinforcement of exterior walls in the 3 civil defense areas are detailed separately",baidu_cloud
+E6,4 人防墙和地下室外墙留洞和预埋套管应与建筑、相关的设备图纸核对无误后方可施工,4. The holes and embedded sleeves left on the exterior walls of the civil defense wall and basement should be checked with the building and related equipment drawings before construction can proceed,baidu_cloud
+22D,人防结构平面图,Plan of Civil Air Defense Structure,baidu_cloud
+232,人防结构平面图,Plan of Civil Air Defense Structure,baidu_cloud
+240,施工图出图,Construction Issue,term_table
+129F,根据民防审图意见修改,Modify according to the opinions of civil defense drawing review,baidu_cloud
+15D2,5 气密测量管（A型）做法参见《FK02》第60页，定位与设备图纸核对无误后方可施工,Refer to page 60 of FK02 for the method of 5 airtight measuring tubes (Type A). Construction can only be carried out after verifying the positioning and equipment drawings are correct,baidu_cloud
+172A,根据室内及景观设计调整,Adjust according to indoor and landscape design,baidu_cloud
+13C,任力之,Ren Lizhi,baidu_cloud
+13E,结构,structure,baidu_cloud
+13F,施工图,Construction Drawing,term_table
+164,强 电,Power Supply,term_table
+165,弱 电,ELV,term_table
+167,暖 通,HVAC,term_table
+169,动 力,Power,term_table
+16C,给排水,Plumbing,term_table
+16E,建 筑,Architecture,term_table
+170,结 构,Structure,term_table
+172,会 签,Countersign,term_table
+184,"本图须加盖出图签章,否则一律无效","本图须加盖Release Stamp,否则一律无效",term_table
+187,执业签章,Registration Stamp,term_table
+189,出图签章,Release Stamp,term_table
+18F, 阶  段, Stage,term_table
+191,版  次,Rev.,term_table
+194,专  业,Discipline,term_table
+196,图  号,Sheet No.,term_table
+19A,绘  图,Drawn by,term_table
+19D,图纸名称,Sheet Title,term_table
+1A4,设计总负责人,Principal in Charge,term_table
+1A5,审  核,Reviewed by,term_table
+1A7,校  对,Checked by,term_table
+1A9,专业负责人,Discipline Responsible,term_table
+1AD,设  计,Designed by,term_table
+1B8,职  责,Responsibility,term_table
+1BA,审  定,Approved by,term_table
+1BF,项目编号,Project No.,term_table
+1C0,子项名称,Sub-Project,term_table
+1C1,姓  名,Name,term_table
+1C3,签  字,Signature,term_table
+1C5,日  期,Date,term_table
+1C8,项目名称,Project Name,term_table
+1CA,设计单位,Design Institute,term_table
+1CF,日期,Date,term_table
+1D1,建设单位,Client,term_table
+1D5,版次,Rev.,term_table
+1D7,版次说明,Description,term_table
+1DC,子项编号,Sub-Project No.,term_table
+217,同济大学建筑设计研究院,Architectural Design & Research Institute of Tongji University,term_table
+218, 集团 有限公司,Group Limited Company,baidu_cloud
+21D,中共上海市委党校,Shanghai Municipal Party School of the Communist Party of China,baidu_cloud
+21F,（教学楼、学员楼）,"(Teaching Building, Student Building)",baidu_cloud
+221,上海市委党校二期工程,Shanghai Municipal Party School Phase II Project,baidu_cloud
+222,（教学楼、学员楼）,"(Teaching Building, Student Building)",baidu_cloud
+224,上海市委党校二期工程,Shanghai Municipal Party School Phase II Project,baidu_cloud
+225,郑毅敏,Zheng Yimin,baidu_cloud
+226,虞终军,Yu Zhongjun,baidu_cloud
+227,陈剑秋,Chen Jianqiu,term_table
+228,虞终军,Yu Zhongjun,baidu_cloud
+229,林建萍,Lin Jianping,baidu_cloud
+22A,刘永璨,Liu Yongcan,baidu_cloud
+22B,刘永璨,Liu Yongcan,baidu_cloud
+265,临空墙结构图,Structural diagram of the overhanging wall,baidu_cloud
+26A,3%%15325通长,3%% 15325 total length,baidu_cloud
+283,防护区内,Within the protective zone,baidu_cloud
+285,防护区外,Outside the protective zone,baidu_cloud
+287,底板厚,base plate thickness,baidu_cloud
+294,垫层,cushion course,baidu_cloud
+2D2,3%%15325通长,3%% 15325 total length,baidu_cloud
+2ED,防空地下室结构构造要求见《07FG01》第53页~71页。,The structural requirements for the air defense basement can be found on pages 53 to 71 of 07FG01.,baidu_cloud
+2EF,人防结构设计说明：,Design Description of Civil Air Defense Structure:,baidu_cloud
+302,防护密闭门门框墙,Protective closed door frame wall,baidu_cloud
+305,3%%15325通长,3%% 15325 total length,baidu_cloud
+316,防护区内,Within the protective zone,baidu_cloud
+318,防护区外,Outside the protective zone,baidu_cloud
+31A,底板厚,base plate thickness,baidu_cloud
+327,垫层,cushion course,baidu_cloud
+355,4%%15325通长,4%% 15325 total length,baidu_cloud
+386,预埋钢门框,Pre embedded steel door frame,baidu_cloud
+3DA,预埋钢门框,Pre embedded steel door frame,baidu_cloud
+418,密闭门门框墙,Sealed door frame wall,baidu_cloud
+41B,3%%15325通长,3%% 15325 total length,baidu_cloud
+426,底板厚,base plate thickness,baidu_cloud
+433,垫层,cushion course,baidu_cloud
+461,3%%15325通长,3%% 15325 total length,baidu_cloud
+4A5,预埋钢门框,Pre embedded steel door frame,baidu_cloud
+4C5,门框墙内所有预埋件、钢门框和铰页锚板，应位置准确，严格校正后方可与主筋焊牢，再浇筑混凝土。,"All embedded parts, steel door frames, and hinge anchor plates inside the door frame wall should be accurately positioned and strictly calibrated before being welded firmly to the main reinforcement before pouring concrete.",baidu_cloud
+4C6,钢门框预埋安装时必须铅直、周边平整，并在安装后门扇开启灵活。,"During the pre embedded installation of steel door frames, they must be vertical and have a flat perimeter, and the door leaf should be flexible to open after installation.",baidu_cloud
+4C7,注意预埋件的方向与门开启方向相对应，门框墙尺寸应满足预埋件设置要求。,"Pay attention to the direction of the embedded parts corresponding to the opening direction of the door, and the size of the door frame wall should meet the requirements for the installation of the embedded parts.",baidu_cloud
+4C8,门框墙受力钢筋伸入支座的锚固长度及其他构造见《07FG04》第4页。,The anchorage length and other structures of the load-bearing steel bars of the door frame wall extending into the support can be found on page 4 of 07FG04.,baidu_cloud
+4C9,门洞四角当墙厚≤400时，应各配置2%%13116斜向钢筋，当墙厚＞400时，应各配置3%%13116斜向钢筋，其长度≥1100。,"When the wall thickness is ≤ 400, 2% 13116 diagonal steel bars should be installed at each corner of the door opening. When the wall thickness is>400, 3% 13116 diagonal steel bars should be installed at each corner, with a length of ≥ 1100.",baidu_cloud
+4F2,预埋钢门框,Pre embedded steel door frame,baidu_cloud
+515,抗爆隔墙结构图,Structural diagram of blast resistant partition wall,baidu_cloud
+51A,3%%15325通长,3%% 15325 total length,baidu_cloud
+531,底板厚,base plate thickness,baidu_cloud
+53E,垫层,cushion course,baidu_cloud
+57E,3%%15325通长,3%% 15325 total length,baidu_cloud
+59A,所有定位尺寸应和建筑图核对无误后方可施工。,All positioning dimensions must be verified with the architectural drawings before construction can proceed.,baidu_cloud
+5B3,人防结构设计套用图集: 国家建筑标准设计图集《防空地下室结构设计》(2007年合订本)(FG01~05),"Design Atlas for Civil Air Defense Structures: National Building Standard Design Atlas ""Design of Air Defense Basement Structures"" (2007 bound edition) (FG01-05)",baidu_cloud
+5B4,人防结构设计依据: 中华人民共和国国家标准《人民防空地下室设计规范》(GB50038-2005),"Design Basis for Civil Air Defense Structures: National Standard of the People's Republic of China ""Design Code for Civil Air Defense Basements"" (GB50038-2005)",baidu_cloud
+5BE,临空墙水平筋构造要求见《07FG01》第61页。防护单元隔墙水平筋构造要求见《07FG01》第62页。,The requirements for the horizontal reinforcement structure of the overhanging wall are stated on page 61 of 07FG01. The construction requirements for the horizontal reinforcement of the protective unit partition wall are stated on page 62 of 07FG01.,baidu_cloud
+5C0,各防护密闭门、密闭门、防爆活门配筋立面图参见《07FG04》。,"Please refer to ""07FG04"" for the elevation diagram of reinforcement for each protective airtight door, airtight door, and explosion-proof valve.",baidu_cloud
+5C2,各防护密闭门、密闭门、防爆活门门框预埋件见建筑图（图集）。,"The embedded parts of each protective airtight door, airtight door, explosion-proof valve door frame are shown in the architectural drawing (atlas).",baidu_cloud
+5DD,混凝土墙上一般门洞配筋示意图,Schematic diagram of reinforcement for general door openings on concrete walls,baidu_cloud
+5E5,底板厚,base plate thickness,baidu_cloud
+5F2,垫层,cushion course,baidu_cloud
+628,门洞顶标高根据建筑要求确定,The top elevation of the door opening is determined according to the building requirements,baidu_cloud
+670,防空地下室外墙配筋另详。,The reinforcement of the exterior wall of the air defense basement is detailed separately.,baidu_cloud
+671,本人防工程为战时核6级、常6级甲类人防物资库，,"I am a Class A civil defense material warehouse for wartime nuclear level 6 and regular level 6,",baidu_cloud
+672,"人防主要荷载如下：
+顶板（qe1）：60kN/m2
+外墙 (饱和土中)（qe2）：60kN/m2
+底板（桩基）（qe3）：25 kN/m2
+室外直通、单向出入口ξ<30处临空墙：160N/m2
+室内出入口，室外竖井、楼梯、穿廊出入口处临空墙：130kN/m2
+室外单向出入口处门框墙：270kN/m2
+室内出入口，室外竖井、楼梯、穿廊出入口处门框墙（qe）：240 kN /m2
+其他详见《FG01~05（2007年合订本）》第19~39页。","The main loads of civil air defense are as follows:
+Top plate (qe1): 60kN/m2
+Exterior wall (in saturated soil) (qe2): 60kN/m2
+Base plate (pile foundation) (qe3): 25 kN/m2
+Outdoor direct and one-way entrances and exits with ξ<30, facing the wall: 160N/m2
+Indoor entrances and exits, outdoor vertical shafts, stairs, and corridor entrances and exits with overhanging walls: 130kN/m2
+Door frame wall at outdoor one-way entrance and exit: 270kN/m2
+Door frame walls (qe) at indoor entrances and exits, outdoor shafts, stairs, and corridor entrances and exits: 240 kN/m2
+For other details, please refer to pages 19-39 of FG01-05 (2007 bound edition).",baidu_cloud
+675,临空墙临战封堵1,Sealing of the aerial wall during battle 1,baidu_cloud
+686,临空墙临战封堵2,"Facing the Sky Wall, Facing the Battle, Blocking 2",baidu_cloud
+689,4%%15325通长,4%% 15325 total length,baidu_cloud
+69A,防护区内,Within the protective zone,baidu_cloud
+69C,防护区外,Outside the protective zone,baidu_cloud
+69E,底板厚,base plate thickness,baidu_cloud
+6AB,垫层,cushion course,baidu_cloud
+6D9,7%%15325通长,7%% 15325 total length,baidu_cloud
+75D,预埋角框L100x10,Pre embedded corner frame L100x10,baidu_cloud
+764,预埋角框L100x10,Pre embedded corner frame L100x10,baidu_cloud
+7AB,临空墙临战封堵3,"Facing the air wall, facing the battle, blocking 3",baidu_cloud
+7AE,4%%15325通长,4%% 15325 total length,baidu_cloud
+7BF,防护区内,Within the protective zone,baidu_cloud
+7C1,防护区外,Outside the protective zone,baidu_cloud
+7C3,底板厚,base plate thickness,baidu_cloud
+7D0,垫层,cushion course,baidu_cloud
+7FE,7%%15325通长,7%% 15325 total length,baidu_cloud
+882,预埋角框L100x10,Pre embedded corner frame L100x10,baidu_cloud
+889,预埋角框L100x10,Pre embedded corner frame L100x10,baidu_cloud
+8D5,防护密闭门门框墙(活门槛),Protective closed door frame wall (movable threshold),baidu_cloud
+8D8,5%%15325通长,5%% 15325 total length,baidu_cloud
+8E9,防护区内,Within the protective zone,baidu_cloud
+8EB,防护区外,Outside the protective zone,baidu_cloud
+8ED,底板厚,base plate thickness,baidu_cloud
+8FA,垫层,cushion course,baidu_cloud
+928,4%%15325通长,4%% 15325 total length,baidu_cloud
+956,预埋钢门框,Pre embedded steel door frame,baidu_cloud
+9AC,预埋钢门框,Pre embedded steel door frame,baidu_cloud
+9EA,密闭门门框墙(活门槛),Sealed door frame wall (movable threshold),baidu_cloud
+9EF,底板厚,base plate thickness,baidu_cloud
+9FC,垫层,cushion course,baidu_cloud
+A2A,3%%15325通长,3%% 15325 total length,baidu_cloud
+A6D,预埋钢门框,Pre embedded steel door frame,baidu_cloud
+AE6,预埋钢门框,Pre embedded steel door frame,baidu_cloud
+B0F,5%%15325通长,5%% 15325 total length,baidu_cloud
+B25,4%%15325通长,4%% 15325 total length,baidu_cloud
+B36,防护区内,Within the protective zone,baidu_cloud
+B38,防护区外,Outside the protective zone,baidu_cloud
+B3A,底板厚,base plate thickness,baidu_cloud
+B47,垫层,cushion course,baidu_cloud
+B75,7%%15325通长,7%% 15325 total length,baidu_cloud
+BF8,预埋角框L100x10,Pre embedded corner frame L100x10,baidu_cloud
+BFF,预埋角框L100x10,Pre embedded corner frame L100x10,baidu_cloud
+C32,混凝土墙、板须设置%%1308的梅花形拉结钢筋，间距≤@500x500。,"Concrete walls and slabs must be equipped with%% 1308 plum blossom shaped tie steel bars, with a spacing of ≤ @ 500x500.",baidu_cloud
+C34,临空墙、抗爆隔墙等的钢筋锚固长度LaF应满足《07FG01》表4-10要求。,"The anchorage length LaF of steel bars for overhanging walls, blast resistant partitions, etc. should meet the requirements of Table 4-10 in 07FG01.",baidu_cloud
+C36,临空墙、临战封堵构造详图《防空地下室建筑构造》(07FJ02)第112页~122页。,"The detailed drawing of the structure of the air defense basement, including the construction of the air defense wall and the sealing during battle, is shown on pages 112 to 122 of 07FJ02.",baidu_cloud
+12DA,临空墙,Hanging wall,baidu_cloud
+12DC,临空墙,Hanging wall,baidu_cloud
+12DE,临空墙,Hanging wall,baidu_cloud
+12E0,临空墙,Hanging wall,baidu_cloud
+12E2,临空墙,Hanging wall,baidu_cloud
+12E4,临空墙,Hanging wall,baidu_cloud
+12E6,临空墙,Hanging wall,baidu_cloud
+12E8,临空墙,Hanging wall,baidu_cloud
+12EA,抗爆隔墙,Explosion resistant partition wall,baidu_cloud
+12EC,抗爆隔墙,Explosion resistant partition wall,baidu_cloud
+13D4,临空墙,Hanging wall,baidu_cloud
+13D6,临空墙,Hanging wall,baidu_cloud
+13D8,临空墙,Hanging wall,baidu_cloud
+13EC,做法同临空墙,The method is the same as that of an aerial wall,baidu_cloud
+13EE,临空墙,Hanging wall,baidu_cloud
+13F0,临空墙,Hanging wall,baidu_cloud
+13F6,临空墙,Hanging wall,baidu_cloud
+13FC,临空墙,Hanging wall,baidu_cloud
+13FE,临空墙,Hanging wall,baidu_cloud
+1400,临空墙,Hanging wall,baidu_cloud
+1406,临空墙,Hanging wall,baidu_cloud
+1441,临空墙,Hanging wall,baidu_cloud
+1444,做法同临空墙,The method is the same as that of an aerial wall,baidu_cloud
+1447,剖面另详,Detailed section,baidu_cloud
+14FA,反BHFM1220-15,Anti BHFM1220-15,baidu_cloud
+14FB,反BHM1220,Anti BHM1220,baidu_cloud
+1505,反BHFM1220-15,Anti BHFM1220-15,baidu_cloud
+15A7,气密测量管 A型 DN50,Airtight measuring tube type A DN50,baidu_cloud
+15A9,管中心离地标高2.5米,The elevation of the pipe center above the ground is 2.5 meters,baidu_cloud
+15B5,管中心离地标高2.5米,The elevation of the pipe center above the ground is 2.5 meters,baidu_cloud
+15B7,气密测量管 A型 DN50,Airtight measuring tube type A DN50,baidu_cloud
+15C7,管中心离地标高2.5米,The elevation of the pipe center above the ground is 2.5 meters,baidu_cloud
+15C9,气密测量管 A型 DN50,Airtight measuring tube type A DN50,baidu_cloud
+15CC,管中心离地标高2.5米,The elevation of the pipe center above the ground is 2.5 meters,baidu_cloud
+15CE,气密测量管 A型 DN50,Airtight measuring tube type A DN50,baidu_cloud
+15F5,防护密闭门门框墙(活门槛),Protective closed door frame wall (movable threshold),baidu_cloud
+15F7,6%%15325通长,6%% 15325 total length,baidu_cloud
+1606,防护区内,Within the protective zone,baidu_cloud
+1608,防护区外,Outside the protective zone,baidu_cloud
+160A,底板厚,base plate thickness,baidu_cloud
+1617,垫层,cushion course,baidu_cloud
+1659,预埋钢门框,Pre embedded steel door frame,baidu_cloud
+16CD,7%%15325通长,7%% 15325 total length,baidu_cloud
+16F8,预埋角框L100x10,Pre embedded corner frame L100x10,baidu_cloud
