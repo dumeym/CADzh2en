@@ -234,7 +234,7 @@ def process_file(
     trans_map = {
         t.original: t.translated
         for t in translations.values()
-        if t.success and t.translated != t.original
+        if t.success and t.source != "untranslated"
     }
 
     untranslated = [

@@ -17,6 +17,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from typing import Optional
 
+from .extractor import contains_chinese
+
 logger = logging.getLogger("cad_translator")
 
 # ---- 数据模型 ----
@@ -268,11 +270,16 @@ class SiliconFlowTranslator(BaseTranslatorAPI):
             "Only output the translation, do not include any explanation or notes."
         )
 
+        # 短文本预处理：为 LLM 提供上下文，提高翻译准确性
+        user_text = text
+        if len(text) <= 4 and contains_chinese(text):
+            user_text = f"在工程图纸中，将以下文字翻译为英文: {text}"
+
         payload = {
             "model": self.model,
             "messages": [
                 {"role": "system", "content": system_prompt},
-                {"role": "user", "content": text},
+                {"role": "user", "content": user_text},
             ],
             "temperature": self.temperature,
             "max_tokens": self.max_tokens,
@@ -297,7 +304,18 @@ class SiliconFlowTranslator(BaseTranslatorAPI):
                 if "choices" in body and body["choices"]:
                     content = body["choices"][0].get("message", {}).get("content", "")
                     if content:
-                        return content.strip()
+                        result = content.strip()
+                        # 如果 API 返回了原文（未翻译），视为失败触发重试
+                        if result == text.strip():
+                            logger.warning(
+                                f"API 返回原文未翻译: '{text[:40]}'"
+                            )
+                            if attempt < max_retries - 1:
+                                wait = 2 ** attempt
+                                time.sleep(wait)
+                                continue
+                            return None
+                        return result
 
                 logger.warning(
                     f"SiliconFlow API 返回异常: {json.dumps(body, ensure_ascii=False)[:200]}"

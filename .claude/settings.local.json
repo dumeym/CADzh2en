@@ -27,7 +27,9 @@
       "Bash(python -c \"import ast; ast.parse\\(open\\('cad_translator/__main__.py', encoding='utf-8'\\).read\\(\\)\\); print\\('__main__.py: syntax OK'\\)\")",
       "Bash(python3 -c \"import ast; ast.parse\\(open\\('d:/MyCodingProjects/ezdxf/cad_translator/translator.py', encoding='utf-8'\\).read\\(\\)\\); print\\('translator.py OK'\\)\")",
       "Bash(python -c \"import ast; ast.parse\\(open\\('d:/MyCodingProjects/ezdxf/cad_translator/translator.py', encoding='utf-8'\\).read\\(\\)\\); print\\('translator.py: syntax OK'\\)\")",
-      "Bash(python -c \"import ast; ast.parse\\(open\\('d:/MyCodingProjects/ezdxf/cad_translator/__main__.py', encoding='utf-8'\\).read\\(\\)\\); print\\('__main__.py: syntax OK'\\)\")"
+      "Bash(python -c \"import ast; ast.parse\\(open\\('d:/MyCodingProjects/ezdxf/cad_translator/__main__.py', encoding='utf-8'\\).read\\(\\)\\); print\\('__main__.py: syntax OK'\\)\")",
+      "Bash(export SILICONFLOW_API_KEY=\"sk-bddvmeupkbhrxulzrsdwoyfeftvvimihthvpbmsvyhknkzco\")",
+      "Bash(python -m cad_translator -i \"D:/MyCodingProjects/ezdxf/test_dxfs2/黄山项目测试1.dwg\" -t \"D:/MyCodingProjects/ezdxf/test_dxfs/terms.csv\" -o \"D:/MyCodingProjects/ezdxf/output_test\" --api siliconflow -v)"
     ]
   }
 }

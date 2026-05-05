@@ -75,15 +75,21 @@ def create_english_style(
     return style_name
 
 
-def apply_style_to_entity(entity, style_name: str) -> None:
-    """将文字样式应用到实体.
+def apply_style_to_entity(
+    entity, style_name: str, width: float = DEFAULT_WIDTH
+) -> None:
+    """将文字样式应用到实体，并强制设置实体级宽度因子.
 
     Args:
         entity: DXF 实体（TEXT, MTEXT, ATTRIB, ATTDEF 等）
         style_name: 样式名称
+        width: 实体级宽度因子（TEXT/ATTRIB/ATTDEF 有效，MTEXT 忽略）
     """
     try:
         entity.dxf.style = style_name
+        # 实体级宽度因子会覆盖样式级宽度，必须强制写入
+        if entity.dxftype() in ("TEXT", "ATTRIB", "ATTDEF"):
+            entity.dxf.width = width
     except Exception as e:
         logger.warning(
             f"无法为实体 {entity.dxftype()}({entity.dxf.handle}) "

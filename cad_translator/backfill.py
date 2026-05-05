@@ -11,7 +11,7 @@ from typing import Optional
 from ezdxf.document import Drawing
 
 from .extractor import TextEntity
-from .style import apply_style_to_entity
+from .style import apply_style_to_entity, DEFAULT_WIDTH
 
 logger = logging.getLogger("cad_translator")
 
@@ -66,16 +66,16 @@ def _backfill_entity(
 
         if dxftype == "TEXT":
             entity.dxf.text = new_text
-            apply_style_to_entity(entity, style_name)
+            apply_style_to_entity(entity, style_name, DEFAULT_WIDTH)
 
         elif dxftype == "MTEXT":
             if hasattr(entity, "text"):
                 entity.text = new_text
-            apply_style_to_entity(entity, style_name)
+            apply_style_to_entity(entity, style_name, DEFAULT_WIDTH)
 
         elif dxftype in ("ATTRIB", "ATTDEF"):
             entity.dxf.text = new_text
-            apply_style_to_entity(entity, style_name)
+            apply_style_to_entity(entity, style_name, DEFAULT_WIDTH)
 
         elif dxftype == "DIMENSION":
             entity.dxf.text = translated
