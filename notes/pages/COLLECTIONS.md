@@ -1,3 +1,0 @@
-- [[DXF-Internals]]
-- [[Algorithms]]
-- [[Unsorted Notes]]

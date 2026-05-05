@@ -1,2 +1,0 @@
-- Website: <https://openscad.org/>
-- Documentation of the `openscad` add-on: <https://ezdxf.mozman.at/docs/addons/openscad.html>

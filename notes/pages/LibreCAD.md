@@ -1,1 +1,0 @@
-- url: <https://librecad.org/>

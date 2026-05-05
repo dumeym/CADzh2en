@@ -1,3 +1,0 @@
-- Wikipedia: <https://en.wikipedia.org/wiki/BSD_licenses>
-- OSI: <https://opensource.org/license/bsd-3-clause>
-- very simmilar to the [[MIT-License]]

@@ -1,1 +1,0 @@
-- Documentaion: <https://ezdxf.mozman.at/docs/query.html#entityquery-class>
