@@ -331,13 +331,17 @@ def process_file(
         filled = backfill(doc, chinese_texts, trans_map, style_name, mode)
     logger.info(f"回填译文: {filled}/{result['chinese_count']} 个实体")
 
-    # Step 7: 保存
+    # Step 7: 保存（先删旧文件，确保全覆盖）
     if mode == "replace":
         out_filename = src.stem + "_EN"
     else:
         out_filename = src.stem + "_双语"
 
     dxf_tmp = os.path.join(output_dir, out_filename + ".dxf")
+    try:
+        os.remove(dxf_tmp)
+    except FileNotFoundError:
+        pass
     doc.saveas(dxf_tmp)
     logger.info(f"中间 DXF 已保存: {dxf_tmp}")
 

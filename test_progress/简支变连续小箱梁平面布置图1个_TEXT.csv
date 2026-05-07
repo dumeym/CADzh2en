@@ -1,0 +1,105 @@
+﻿handle,original,translated,source
+5DBCE9,4.本图平面曲线要素另见道路专业有关图纸。,4. The planar curve elements in this diagram can be found in the relevant drawings of the road discipline.,baidu_cloud
+5DBCEA,3.伸缩缝和排水孔预留位置另见详图。,3. The reserved positions for expansion joints and drainage holes are shown in the detailed drawings.,baidu_cloud
+5DBCEB,2.本图须与桥梁总体布置图、小箱梁构造图配合使用。,2. This drawing must be used in conjunction with the overall layout of the bridge and the structural drawing of the small box girder.,baidu_cloud
+5DBCEC,1.本图尺寸单位除桩号以米计外，余均以毫米计。,"1. The dimensions in this drawing are measured in millimeters, except for pile numbers which are measured in meters.",baidu_cloud
+5DBCED,附注,Note,baidu_cloud
+5DBCEE,5.小箱梁梁底支座型号另见下部盖梁图纸。,"5. For the model of the bottom support of the small box girder, please refer to the lower cover beam drawing.",baidu_cloud
+5DBCEF,6.本图所示方向均为沿主线道路设计中心线桩号前进方向布置。,6. The directions shown in this diagram are arranged along the direction of the main road design centerline pile number.,baidu_cloud
+5DBCF0,7.小箱梁现浇中横梁部分未在图中表示，详见小箱梁构造图。,7. The crossbeam part of the cast-in-place small box girder is not shown in the diagram. Please refer to the structural diagram of the small box girder for details.,baidu_cloud
+5DBD16,非连续端立面示意图,Non continuous end elevation diagram,baidu_cloud
+5DBD1B,盖梁,cap beam,baidu_cloud
+5DBD47,小箱梁,Small box girder,baidu_cloud
+5DBD4D,非连续端,Non continuous end,baidu_cloud
+5DBD53,8.小箱梁非连续端当纵坡 | i |>1%%%时立面梁端修正角γ需作修正;,"When the longitudinal slope | i |>1%%% at the discontinuous end of the small box girder, the vertical beam end correction angle γ needs to be corrected;",baidu_cloud
+5DBD54,"当纵坡 | i |>3%%%时梁长需作修正,梁长调整长度为L/cosγ。","When the longitudinal slope | i |>3%%, the beam length needs to be corrected, and the adjustment length of the beam length is L/cos γ.",baidu_cloud
+5F14B4,现浇段,Cast in place section,baidu_cloud
+5F14B5,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14B6,（边跨边梁）,(Side span side beam),baidu_cloud
+5F14B8,现浇段,Cast in place section,baidu_cloud
+5F14B9,现浇段,Cast in place section,baidu_cloud
+5F14BA,现浇段,Cast in place section,baidu_cloud
+5F14BB,现浇段,Cast in place section,baidu_cloud
+5F14BC,现浇段,Cast in place section,baidu_cloud
+5F14BD,现浇段,Cast in place section,baidu_cloud
+5F14BE,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14BF,（边跨边梁）,(Side span side beam),baidu_cloud
+5F14C1,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14C2,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14C4,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14C5,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14C7,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14C8,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14CA,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14CB,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14CD,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14CE,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14D0,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14D1,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14D4,边梁边线1,Edge beam edge 1,baidu_cloud
+5F14D7,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F14DA,边梁边线2,Edge beam edge line 2,baidu_cloud
+5F14DD,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F14E0,横隔板中心线,Horizontal partition centerline,baidu_cloud
+5F14E3,道路设计中心线,Road design centerline,baidu_cloud
+5F14ED,小箱梁平面布置图,Layout plan of small box girder,baidu_cloud
+5F1B90,边跨边支座布置图,Layout of side span and side support,baidu_cloud
+5F1B97,支座中心线,Support centerline,baidu_cloud
+5F1B9C,(仅示外边梁),(Only showing the outer beam),baidu_cloud
+5F1B9D,中跨支座布置图,Layout of mid span supports,baidu_cloud
+5F1BA1,(仅示中梁),(Only showing the middle beam),baidu_cloud
+5F1BAC,支座中心线,Support centerline,baidu_cloud
+5EFCAE,"H=1.6m,B=25.5m小箱梁平面布置图(一)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (Part 1),baidu_cloud
+5EFCB0,"H=1.6m,B=25.5m小箱梁平面布置图(二)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (II),baidu_cloud
+5EFCB2,"H=1.6m,B=25.5m小箱梁平面布置图(三)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (III),baidu_cloud
+5F37C0,"H=1.6m,B=25.5m小箱梁平面布置图(四)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (Part 4),baidu_cloud
+5F5148,"H=1.6m,B=25.5m小箱梁平面布置图(五)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (V),baidu_cloud
+5F514F,"H=1.6m,B=25.5m小箱梁平面布置图(六)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (VI),baidu_cloud
+5F60A5,项目名称,Project Name,term_table
+5F60A6,子项名称,Sub-Project,term_table
+5F60A8,项目编号,Project No.,term_table
+5F60C7,专业负责人,Discipline Responsible,term_table
+5F60C9,设计总负责人,Principal in Charge,term_table
+5F60CB,校 对,proofread,baidu_cloud
+5F60CD,审 核,"review, audit",baidu_cloud
+5F60D0,审 定,Approved,baidu_cloud
+5F60D2,比  例,proportion,baidu_cloud
+5F60D4,设 计,design,baidu_cloud
+5F60D6,绘 图,mapping,baidu_cloud
+5F60D9,图  号,Sheet No.,term_table
+5F60DB,专  业,Discipline,term_table
+5F60DC,图纸名称,Sheet Title,term_table
+5F60E2, 阶  段, Stage,term_table
+5F60E4,版  次,Rev.,term_table
+5F6120,同济大学建筑设计研究院,Architectural Design & Research Institute of Tongji University,term_table
+5F6121, 集团 有限公司,Group Limited Company,baidu_cloud
+5F6126,子项编号,Sub-Project No.,term_table
+5F612D,结 构,Structure,term_table
+5F612F,建 筑,Architecture,term_table
+5F6134,会 签,Countersign,term_table
+5F6136,桥 梁,Bridge,baidu_cloud
+5F6138,道 路,road,baidu_cloud
+5F6149,环 境,environment,baidu_cloud
+5F614B,给排水,Plumbing,term_table
+5F614D,信 息,information,baidu_cloud
+5F614F,交 通,Transportation,baidu_cloud
+5F6151,强 电,Power Supply,term_table
+5F6153,景 观,Scenery,baidu_cloud
+5F6155,动 力,Power,term_table
+5F6157,暖 通,HVAC,term_table
+5F6159,日 期,date,baidu_cloud
+5F615B,执业签章,Registration Stamp,term_table
+5F615F,出图签章,Release Stamp,term_table
+5F6164,"本图须加盖出图签章,否则一律无效","本图须加盖Release Stamp,否则一律无效",term_table
+5F6176,见图示,See the illustration,baidu_cloud
+5F6178,桥梁,bridge,baidu_cloud
+5F617A,鄞州大道快速路（机场路—鄞横线）工程设计Ⅰ标,Design Section I of Yinzhou Avenue Expressway (Airport Road Yinheng Line) Project,baidu_cloud
+5F617C,施工图,Construction Drawing,term_table
+5F6180,施工I标段,Construction Section I,baidu_cloud
+5F6181,李映,Li Ying,baidu_cloud
+5F6182,郑润清,Zheng Runqing,baidu_cloud
+5F6183,郑润清,Zheng Runqing,baidu_cloud
+5F6FEA,唐虎翔,Tang Huxiang,baidu_cloud
+5F81C4,陈何峰,Chen Hefeng,baidu_cloud
+5F81C5,"王安民,蒋相华","Wang Anmin, Jiang Xianghua",baidu_cloud
+5F81C6,"曹沛,王安民","Cao Pei, Wang Anmin",baidu_cloud

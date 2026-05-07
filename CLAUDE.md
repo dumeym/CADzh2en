@@ -20,6 +20,8 @@ python -m cad_translator -d test_input -t terms.csv -o test_output
 python -m cad_translator -i 图纸.dwg -t terms.csv -o test_output --api siliconflow
 ```
 
+**快速翻译：** 双击 `translate.bat` 打开交互菜单选择文件；文字宽度因子可在 `translate.bat` 中修改 `STYLE_WIDTH=0.65`。
+
 **关键参数：**
 | 参数 | 作用 |
 |------|------|
@@ -28,6 +30,7 @@ python -m cad_translator -i 图纸.dwg -t terms.csv -o test_output --api silicon
 | `-o` | 输出目录 |
 | `--api` | 翻译引擎：`baidu`（默认）、`siliconflow`、`null`（仅术语表） |
 | `-m bilingual` | 双语模式（默认 replace） |
+| `--style-width` | SHX 字体宽度因子（默认 0.65） |
 | `--skip-odafc` | 输入已是 DXF 时跳过转换 |
 
 ## 构建与测试

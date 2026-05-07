@@ -1,8 +1,8 @@
 ﻿handle,original,translated,source
 39E,FM乙1522,FM B 1522,baidu_cloud
 3F8,储藏,storage,baidu_cloud
-41E,洽谈室,negotiation room,baidu_cloud
-434,洽谈室,negotiation room,baidu_cloud
+41E,洽谈室,meeting room,baidu_cloud
+434,洽谈室,meeting room,baidu_cloud
 464,FM乙1022,FM B 1022,baidu_cloud
 465,东区建筑面积：872平方米,东区Building Area：872平方米,term_table
 467,其中，西区建筑面积：1693平方米,其中，西区Building Area：1693平方米,term_table
@@ -32,9 +32,9 @@
 626,女卫,Women's Toilet,baidu_cloud
 627,男卫,Men's Toilet,baidu_cloud
 62B,水,water,baidu_cloud
-6F1,洽谈室,negotiation room,baidu_cloud
-6F7,洽谈室,negotiation room,baidu_cloud
-700,洽谈室,negotiation room,baidu_cloud
+6F1,洽谈室,meeting room,baidu_cloud
+6F7,洽谈室,meeting room,baidu_cloud
+700,洽谈室,meeting room,baidu_cloud
 707,银行办公,Bank office,baidu_cloud
 708,银行会议,Bank Meeting,baidu_cloud
 747,庭院,courtyard,baidu_cloud
@@ -52,13 +52,13 @@ DA1,32级,Level 32,baidu_cloud
 DA2,32级,Level 32,baidu_cloud
 DB3,银行办公,Bank office,baidu_cloud
 DB4,电信运营机房,Telecommunications operation room,baidu_cloud
-DC6,洽谈室,negotiation room,baidu_cloud
+DC6,洽谈室,meeting room,baidu_cloud
 E3D,FM乙1422,FM B 1422,baidu_cloud
 E55,30级,Level 30,baidu_cloud
 E61,FM乙0722,FM B 0722,baidu_cloud
 E62,30级,Level 30,baidu_cloud
 E64,办公,office,baidu_cloud
-E68,网络机房,Network computer room,baidu_cloud
+E68,网络机房,network equipment room,baidu_cloud
 E6D,水,water,baidu_cloud
 E80,尾气井,Exhaust well,baidu_cloud
 E84,FM甲1022,FM A1022,baidu_cloud
