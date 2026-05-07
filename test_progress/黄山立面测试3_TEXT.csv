@@ -1,11 +1,40 @@
 ﻿handle,original,translated,source
 2AD,屋顶平面图 1:50,Roof Plan 1:50,term_table
 2D0,天窗,Skylight,term_table
+33D,10.211(结),10.211 (Conclusion),baidu_cloud
+341,9.288(结),9.288 (Conclusion),baidu_cloud
+345,9.288(结),9.288 (Conclusion),baidu_cloud
+429,屋面水落口,Roof water outlet,baidu_cloud
+42A,详00J201-1,See00J201-1,term_table
+430,屋面水落口,Roof water outlet,baidu_cloud
+431,详00J201-1,See00J201-1,term_table
+5AD,屋面水落口,Roof water outlet,baidu_cloud
+5AE,详00J201-1,See00J201-1,term_table
+5B4,屋面水落口,Roof water outlet,baidu_cloud
+5B5,详00J201-1,See00J201-1,term_table
+5BC,9.888(结),9.888 (Conclusion),baidu_cloud
+5D5,屋面水落口,Roof water outlet,baidu_cloud
+5D6,详00J201-1,See00J201-1,term_table
+5DC,屋面水落口,Roof water outlet,baidu_cloud
+5DD,详00J201-1,See00J201-1,term_table
+69B,屋面水落口,Roof water outlet,baidu_cloud
+69C,详00J201-1,See00J201-1,term_table
+7E1,11.483(结),11.483 (Conclusion),baidu_cloud
+7E5,4.474(结),4.474 (Conclusion),baidu_cloud
+834,4.474(结),4.474 (Conclusion),baidu_cloud
+88D,屋面水落口,Roof water outlet,baidu_cloud
+88E,详00J201-1,See00J201-1,term_table
 89F,预埋水落口,Embedded Roof Drain,term_table
 8A4,预埋水落口,Embedded Roof Drain,term_table
+8BC,6.500(结),6.500 (Conclusion),baidu_cloud
+8C0,7.250(结),7.250 (Conclusion),baidu_cloud
+8C4,3.200(结),3.200 (Conclusion),baidu_cloud
+8C8,3.200(结),3.200 (Conclusion),baidu_cloud
+8CC,3.200(结),3.200 (Conclusion),baidu_cloud
+8D0,3.200(结),3.200 (Conclusion),baidu_cloud
 8D3,屋顶层平面图,Roof Plan,term_table
 8DC,希尔顿度假酒店    楼,Hilton Resort Hotel    楼,term_table
-A0E,建筑,architecture,baidu_cloud
+A0E,建筑,architecture,cache
 A0F,施工图,Construction Drawing,term_table
 A17,陈剑秋,Chen Jianqiu,term_table
 A18,周建峰,Zhou Jianfeng,term_table
@@ -15,9 +44,13 @@ A1B,潘涛,Pan Tao,term_table
 A1C,方新维,Fang Xinwei,term_table
 A1D,何磊,He Lei,term_table
 A1F,施工图出图,Construction Issue,term_table
+A2B,屋面水落口,Roof water outlet,baidu_cloud
+A2C,详00J201-1,See00J201-1,term_table
+A34,屋面水落口,Roof water outlet,baidu_cloud
+A35,详00J201-1,See00J201-1,term_table
 A44,穿女儿墙水落口,Roof Drain Through Parapet,term_table
 9B5,同济大学建筑设计研究院,Architectural Design & Research Institute of Tongji University,term_table
-9B6, 集团 有限公司,Group Limited Company,baidu_cloud
+9B6, 集团 有限公司, Group Limited Company,cache
 902,强 电,Power Supply,term_table
 903,弱 电,ELV,term_table
 905,暖 通,HVAC,term_table

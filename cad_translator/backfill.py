@@ -24,6 +24,7 @@ def backfill(
     translations: dict[str, str],
     style_name: str,
     mode: str = "replace",
+    width: float = DEFAULT_WIDTH,
 ) -> int:
     """回填译文到 DXF 文档.
 
@@ -33,6 +34,7 @@ def backfill(
         translations: {原文: 译文} 字典
         style_name: 要应用的英文样式名
         mode: "replace"（替换）或 "bilingual"（双语）
+        width: 实体级宽度因子
 
     Returns:
         回填的实体数量
@@ -43,7 +45,7 @@ def backfill(
             continue
 
         translated = translations[te.text]
-        if _backfill_entity(te, translated, style_name, mode):
+        if _backfill_entity(te, translated, style_name, mode, width):
             count += 1
 
     logger.info(f"回填完成: {count}/{len(texts)} 个实体")
@@ -55,6 +57,7 @@ def _backfill_entity(
     translated: str,
     style_name: str,
     mode: str,
+    width: float = DEFAULT_WIDTH,
 ) -> bool:
     """回填单个实体."""
     try:
@@ -68,16 +71,16 @@ def _backfill_entity(
 
         if dxftype == "TEXT":
             entity.dxf.text = new_text
-            apply_style_to_entity(entity, style_name, DEFAULT_WIDTH)
+            apply_style_to_entity(entity, style_name, width)
 
         elif dxftype == "MTEXT":
             if hasattr(entity, "text"):
                 entity.text = new_text
-            apply_style_to_entity(entity, style_name, DEFAULT_WIDTH)
+            apply_style_to_entity(entity, style_name, width)
 
         elif dxftype in ("ATTRIB", "ATTDEF"):
             entity.dxf.text = new_text
-            apply_style_to_entity(entity, style_name, DEFAULT_WIDTH)
+            apply_style_to_entity(entity, style_name, width)
 
         elif dxftype == "DIMENSION":
             entity.dxf.text = translated
@@ -101,6 +104,7 @@ def backfill_from_csv(
     csv_path: str,
     style_name: str,
     mode: str = "replace",
+    width: float = DEFAULT_WIDTH,
 ) -> int:
     """从 CSV 文件读取翻译对并回填.
 
@@ -113,6 +117,7 @@ def backfill_from_csv(
         csv_path: 翻译对 CSV 文件路径
         style_name: 要应用的英文样式名
         mode: "replace"（替换）或 "bilingual"（双语）
+        width: 实体级宽度因子
 
     Returns:
         回填的实体数量
@@ -141,7 +146,7 @@ def backfill_from_csv(
         translated = handle_map.get(te.handle) or text_map.get(te.text)
         if translated is None:
             continue
-        if _backfill_entity(te, translated, style_name, mode):
+        if _backfill_entity(te, translated, style_name, mode, width):
             count += 1
 
     logger.info(f"CSV 回填完成: {count}/{len(texts)} 个实体 (来自 {csv_path})")

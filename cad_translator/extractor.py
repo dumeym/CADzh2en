@@ -199,6 +199,23 @@ def _extract_from_entity(entity: DXFEntity, block_name: str = "") -> list[TextEn
                         )
                     )
 
+        elif dxftype == "INSERT":
+            insert: Insert = entity  # type: ignore[assignment]
+            for attrib in insert.attribs:
+                text = attrib.dxf.text
+                if text:
+                    plain = plain_text(text)
+                    if not should_skip(plain):
+                        result.append(
+                            TextEntity(
+                                handle=attrib.dxf.handle,
+                                text=plain,
+                                entity=attrib,
+                                block_name=block_name,
+                                entity_type="ATTRIB",
+                            )
+                        )
+
     except Exception as e:
         logger.warning(
             f"提取实体 {dxftype}(handle={entity.dxf.handle}) 时出错: {e}"  # type: ignore[union-attr]

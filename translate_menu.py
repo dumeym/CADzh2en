@@ -6,7 +6,7 @@ import subprocess
 from pathlib import Path
 
 INPUT_DIR = Path("test_input")
-TERM_TABLE = "terms.csv"
+TERM_TABLE = "terms_custom.csv"
 OUTPUT_DIR = "test_output"
 STYLE_WIDTH = 0.65
 

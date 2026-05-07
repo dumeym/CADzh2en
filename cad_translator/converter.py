@@ -77,13 +77,19 @@ def dwg_to_dxf(input_path: str | os.PathLike, output_dir: str | os.PathLike) -> 
             shutil.rmtree(tmpdir, ignore_errors=True)
 
 
-def dxf_to_dwg(doc: Drawing, output_path: str | os.PathLike, replace: bool = True) -> str:
+def dxf_to_dwg(
+    doc: Drawing,
+    output_path: str | os.PathLike,
+    replace: bool = True,
+    dxfversion: str | None = None,
+) -> str:
     """将 ezdxf Drawing 对象保存为 DWG 文件.
 
     Args:
         doc: ezdxf Drawing 对象
         output_path: 输出的 DWG 文件路径
         replace: 是否覆盖已有文件
+        dxfversion: 目标 DXF 版本（如 "AC1018"），None 则保持当前版本
 
     Returns:
         输出的 DWG 文件路径
@@ -99,6 +105,9 @@ def dxf_to_dwg(doc: Drawing, output_path: str | os.PathLike, replace: bool = Tru
         dst.unlink()
 
     dst.parent.mkdir(parents=True, exist_ok=True)
+    if dxfversion:
+        doc.dxfversion = dxfversion
+        logger.info(f"设置 DXF 版本: {dxfversion}")
     logger.info(f"正在导出 DWG: {dst.name}")
     odafc.export_dwg(doc, str(dst), replace=True)
     logger.info(f"导出完成: {dst}")

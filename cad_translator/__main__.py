@@ -22,6 +22,7 @@ import sys
 import time
 from pathlib import Path
 
+import ezdxf
 from dotenv import load_dotenv
 
 from . import __version__
@@ -34,6 +35,7 @@ from .translator import (
     BaiduCloudTranslator,
     SiliconFlowTranslator,
     NullTranslator,
+    append_terms_cache,
 )
 from .backfill import backfill
 
@@ -71,8 +73,8 @@ def build_parser() -> argparse.ArgumentParser:
     # 术语表
     parser.add_argument(
         "-t", "--term-table",
-        required=True,
-        help="CSV 术语对照表路径（UTF-8 编码，两列：中文,英文）",
+        default="terms_custom.csv",
+        help="CSV 术语对照表路径（UTF-8 编码，两列：中文,英文，默认: terms_custom.csv）",
     )
 
     # 输出
@@ -202,7 +204,7 @@ def _save_translation_csv(
 def process_file(
     input_path: str,
     output_dir: str,
-    term_table: TermTable,
+    term_tables: list[TermTable],
     style_name: str,
     style_font: str,
     style_width: float,
@@ -240,6 +242,7 @@ def process_file(
             return result
         dxf_path = dwg_to_dxf(str(src), output_dir)
         doc = read_dxf(dxf_path)
+        os.remove(dxf_path)  # 清理中间 DXF
     elif ext == ".dxf":
         doc = read_dxf(str(src))
     else:
@@ -287,7 +290,7 @@ def process_file(
             siliconflow_api_key=siliconflow_api_key,
             siliconflow_model=siliconflow_model,
         )
-        engine = TranslatorEngine(term_table=term_table, api=api)
+        engine = TranslatorEngine(term_tables=term_tables, api=api)
 
         # 收集需要翻译的原文
         texts_to_translate = list(set(te.text for te in chinese_texts))
@@ -326,36 +329,34 @@ def process_file(
     # Step 6: 回填译文
     if from_csv:
         from .backfill import backfill_from_csv
-        filled = backfill_from_csv(doc, chinese_texts, csv_path, style_name, mode)
+        filled = backfill_from_csv(doc, chinese_texts, csv_path, style_name, mode, style_width)
     else:
-        filled = backfill(doc, chinese_texts, trans_map, style_name, mode)
+        filled = backfill(doc, chinese_texts, trans_map, style_name, mode, style_width)
     logger.info(f"回填译文: {filled}/{result['chinese_count']} 个实体")
 
-    # Step 7: 保存（先删旧文件，确保全覆盖）
+    # Step 7: 保存（仅 DWG，跳过中间 DXF）
     if mode == "replace":
         out_filename = src.stem + "_EN"
     else:
         out_filename = src.stem + "_双语"
 
-    dxf_tmp = os.path.join(output_dir, out_filename + ".dxf")
-    try:
-        os.remove(dxf_tmp)
-    except FileNotFoundError:
-        pass
-    doc.saveas(dxf_tmp)
-    logger.info(f"中间 DXF 已保存: {dxf_tmp}")
-
-    if ext == ".dwg":
-        # DWG 输入，转回 DWG
+    if ext == ".dwg" or is_odafc_installed():
+        # 设置 CAD2004 格式以提升兼容性
+        doc.dxfversion = ezdxf.DXF2004
         out_path = os.path.join(output_dir, out_filename + ".dwg")
         dxf_to_dwg(doc, out_path)
-        if os.path.exists(dxf_tmp):
-            os.remove(dxf_tmp)
+        logger.info(f"输出 DWG: {out_path}")
     else:
-        # DXF 输入，直接保存为 DXF
-        out_path = dxf_tmp
+        # 无 ODAFC 时回退 DXF
+        out_path = os.path.join(output_dir, out_filename + ".dxf")
+        doc.saveas(out_path)
+        logger.info(f"ODAFC 不可用，输出 DXF: {out_path}")
 
     logger.info(f"输出文件: {out_path}")
+
+    # 携带翻译结果供外部记录缓存
+    if not from_csv:
+        result["_trans_results"] = trans_results
 
     return result
 
@@ -363,7 +364,7 @@ def process_file(
 def process_directory(
     directory: str,
     output_dir: str,
-    term_table: TermTable,
+    term_tables: list[TermTable],
     style_name: str,
     style_font: str,
     style_width: float,
@@ -395,7 +396,7 @@ def process_directory(
         result = process_file(
             str(fpath),
             output_dir,
-            term_table,
+            term_tables,
             style_name,
             style_font,
             style_width,
@@ -432,12 +433,16 @@ def main() -> None:
 
     start = time.time()
 
-    # 加载术语表
-    if not os.path.isfile(args.term_table):
-        logger.error(f"术语表文件不存在: {args.term_table}")
-        sys.exit(1)
-
-    term_table = TermTable(args.term_table)
+    # 加载术语表（用户自定义 + 翻译缓存）
+    term_custom = TermTable(args.term_table, source_name="term_table")
+    term_cache = TermTable("terms_cache.csv", source_name="cache")
+    term_tables: list[TermTable] = []
+    if term_custom.count > 0:
+        term_tables.append(term_custom)
+    if term_cache.count > 0:
+        term_tables.append(term_cache)
+    if not term_tables:
+        logger.warning("未加载任何术语表，仅使用 API 翻译")
 
     # 确保输出目录存在
     os.makedirs(args.output_dir, exist_ok=True)
@@ -446,7 +451,7 @@ def main() -> None:
         results = process_directory(
             args.directory,
             args.output_dir,
-            term_table,
+            term_tables,
             args.style_name,
             args.style_font,
             args.style_width,
@@ -465,7 +470,7 @@ def main() -> None:
             process_file(
                 args.input,
                 args.output_dir,
-                term_table,
+                term_tables,
                 args.style_name,
                 args.style_font,
                 args.style_width,
@@ -482,6 +487,17 @@ def main() -> None:
         ]
 
     elapsed = time.time() - start
+
+    # 收集翻译结果写入缓存（跳过 term_table 来源的条目）
+    cache_entries: list[tuple[str, str, str]] = []
+    for r in results:
+        trans_results = r.get("_trans_results")
+        if trans_results:
+            for tr in trans_results.values():
+                if tr.success and tr.source != "term_table" and tr.translated != tr.original:
+                    cache_entries.append((tr.original, tr.translated, tr.source))
+    if cache_entries:
+        append_terms_cache("terms_cache.csv", cache_entries)
 
     # 打印摘要
     ok_count = sum(1 for r in results if r["status"] == "ok")

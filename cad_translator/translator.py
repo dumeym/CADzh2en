@@ -15,6 +15,7 @@ import urllib.parse
 import urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Optional
 
 from .extractor import contains_chinese
@@ -40,10 +41,18 @@ class TranslationResult:
 class TermTable:
     """CSV 术语表，支持最长匹配优先."""
 
-    def __init__(self, filepath: str | os.PathLike):
+    def __init__(
+        self,
+        filepath: str | os.PathLike,
+        source_name: str = "term_table",
+    ):
         self.filepath = str(filepath)
+        self.source_name = source_name
         self._pairs: list[tuple[str, str]] = []
-        self._load()
+        if os.path.isfile(self.filepath):
+            self._load()
+        else:
+            logger.info(f"术语表文件不存在，跳过加载: {self.filepath}")
 
     def _load(self) -> None:
         """从 CSV 文件加载术语表."""
@@ -520,14 +529,14 @@ class BaiduCloudTranslator(BaseTranslatorAPI):
 
 
 class TranslatorEngine:
-    """组合翻译引擎：先术语表，再 API 回退."""
+    """组合翻译引擎：先术语表（可多个），再 API 回退."""
 
     def __init__(
         self,
-        term_table: Optional[TermTable] = None,
+        term_tables: Optional[list[TermTable]] = None,
         api: Optional[BaseTranslatorAPI] = None,
     ):
-        self._term_table = term_table
+        self._term_tables = term_tables or []
         self._api = api
         self._stats = {
             "term_hits": 0,
@@ -566,22 +575,22 @@ class TranslatorEngine:
         baidu_app_id: str = "",
         siliconflow_api_key: str = "",
         siliconflow_model: str = "Qwen/Qwen3.5-9B",
-        term_table: Optional[TermTable] = None,
+        term_tables: Optional[list[TermTable]] = None,
     ) -> "TranslatorEngine":
         """从配置创建翻译引擎.
 
         Args:
-            term_file: CSV 术语表路径（与 term_table 二选一）.
+            term_file: CSV 术语表路径（与 term_tables 二选一）.
             api_type: API 类型 ("null", "baidu", "siliconflow").
             baidu_api_key: 百度云 API Key.
             baidu_secret_key: 百度云 Secret Key.
             baidu_app_id: 百度云 App ID（仅日志）.
             siliconflow_api_key: 硅基流动 API key.
             siliconflow_model: 硅基流动模型名.
-            term_table: 已加载的术语表实例（与 term_file 二选一）.
+            term_tables: 已加载的术语表实例列表（与 term_file 二选一）.
         """
-        if term_table is None:
-            term_table = TermTable(term_file) if term_file else None
+        if term_tables is None:
+            term_tables = [TermTable(term_file)] if term_file else []
 
         api = cls.create_api(
             api_type=api_type,
@@ -591,7 +600,7 @@ class TranslatorEngine:
             siliconflow_api_key=siliconflow_api_key,
             siliconflow_model=siliconflow_model,
         )
-        return cls(term_table=term_table, api=api)
+        return cls(term_tables=term_tables, api=api)
 
     @property
     def stats(self) -> dict:
@@ -601,15 +610,15 @@ class TranslatorEngine:
         """翻译单段文本."""
         self._stats["total"] += 1
 
-        # 1. 先尝试术语表
-        if self._term_table is not None:
-            result = self._term_table.translate(text)
+        # 1. 依次尝试所有术语表（优先顺序 = 列表顺序）
+        for term_table in self._term_tables:
+            result = term_table.translate(text)
             if result is not None:
                 self._stats["term_hits"] += 1
                 return TranslationResult(
                     original=text,
                     translated=result,
-                    source="term_table",
+                    source=term_table.source_name,
                 )
 
         # 2. API 回退
@@ -644,3 +653,50 @@ class TranslatorEngine:
             results[text] = result
 
         return results
+
+
+# ---- 翻译缓存读写 ----
+
+CACHE_CSV_HEADER = ["original", "translated", "source"]
+
+
+def append_terms_cache(
+    filepath: str | os.PathLike,
+    new_entries: list[tuple[str, str, str]],
+) -> None:
+    """追加新条目到翻译缓存文件，按 original 去重.
+
+    Args:
+        filepath: terms_cache.csv 路径.
+        new_entries: [(original, translated, source), ...] 列表.
+    """
+    path = Path(filepath)
+
+    # 读取已有条目原文（去重依据）
+    existing: set[str] = set()
+    if path.exists():
+        with open(path, "r", encoding="utf-8-sig") as f:
+            reader = csv.reader(f)
+            for row in reader:
+                if row and row[0].strip():
+                    existing.add(row[0].strip())
+
+    # 过滤去重：跳过已存在、空原文、空译文
+    to_add = [
+        (orig, trans, src)
+        for orig, trans, src in new_entries
+        if orig not in existing and orig and trans
+    ]
+    if not to_add:
+        return
+
+    # 追加写入
+    is_new = not path.exists()
+    with open(path, "a", encoding="utf-8-sig", newline="") as f:
+        writer = csv.writer(f)
+        if is_new:
+            writer.writerow(CACHE_CSV_HEADER)
+        for orig, trans, src in to_add:
+            writer.writerow([orig, trans, src])
+
+    logger.info(f"翻译缓存已更新: +{len(to_add)} 条 ({path})")
