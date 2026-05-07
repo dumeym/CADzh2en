@@ -1,0 +1,58 @@
+﻿handle,original,translated,source
+2AD,屋顶平面图 1:50,Roof Plan 1:50,term_table
+2D0,天窗,Skylight,term_table
+89F,预埋水落口,Embedded Roof Drain,term_table
+8A4,预埋水落口,Embedded Roof Drain,term_table
+8D3,屋顶层平面图,Roof Plan,term_table
+8DC,希尔顿度假酒店    楼,Hilton Resort Hotel    楼,term_table
+A0E,建筑,architecture,baidu_cloud
+A0F,施工图,Construction Drawing,term_table
+A17,陈剑秋,Chen Jianqiu,term_table
+A18,周建峰,Zhou Jianfeng,term_table
+A19,陈剑秋,Chen Jianqiu,term_table
+A1A,汤艳丽,Tang Yanli,term_table
+A1B,潘涛,Pan Tao,term_table
+A1C,方新维,Fang Xinwei,term_table
+A1D,何磊,He Lei,term_table
+A1F,施工图出图,Construction Issue,term_table
+A44,穿女儿墙水落口,Roof Drain Through Parapet,term_table
+9B5,同济大学建筑设计研究院,Architectural Design & Research Institute of Tongji University,term_table
+9B6, 集团 有限公司,Group Limited Company,baidu_cloud
+902,强 电,Power Supply,term_table
+903,弱 电,ELV,term_table
+905,暖 通,HVAC,term_table
+907,动 力,Power,term_table
+90A,给排水,Plumbing,term_table
+90C,建 筑,Architecture,term_table
+90E,结 构,Structure,term_table
+910,会 签,Countersign,term_table
+922,"本图须加盖出图签章,否则一律无效","本图须加盖Release Stamp,否则一律无效",term_table
+925,执业签章,Registration Stamp,term_table
+927,出图签章,Release Stamp,term_table
+92D, 阶  段, Stage,term_table
+92F,版  次,Rev.,term_table
+932,专  业,Discipline,term_table
+934,图  号,Sheet No.,term_table
+938,绘  图,Drawn by,term_table
+93B,图纸名称,Sheet Title,term_table
+942,设计总负责人,Principal in Charge,term_table
+943,审  核,Reviewed by,term_table
+945,校  对,Checked by,term_table
+947,专业负责人,Discipline Responsible,term_table
+94B,设  计,Designed by,term_table
+956,职  责,Responsibility,term_table
+958,审  定,Approved by,term_table
+95D,项目编号,Project No.,term_table
+95E,子项名称,Sub-Project,term_table
+95F,姓  名,Name,term_table
+961,签  字,Signature,term_table
+963,日  期,Date,term_table
+966,项目名称,Project Name,term_table
+968,设计单位,Design Institute,term_table
+96D,日期,Date,term_table
+96F,建设单位,Client,term_table
+973,版次,Rev.,term_table
+975,版次说明,Description,term_table
+97A,子项编号,Sub-Project No.,term_table
+9B9,黄山元一大观希尔顿度假酒店,Huangshan Yuanyidaguan Hilton Resort Hotel,term_table
+9BA,安徽黄山元一柏庄投资发展有限公司,Anhui Huangshan Yuanyi Baizhuang Investment Development Co.,term_table

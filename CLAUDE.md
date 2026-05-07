@@ -7,6 +7,29 @@
 ## 项目概览
 ezdxf 是一个纯 Python DXF 读写库，支持 DXF R12–R2018 版本。本项目基于 ezdxf 开发 **CAD 图纸中英文自动翻译工具**。
 
+## 使用方式
+
+```bash
+# 单文件翻译（默认使用百度云翻译）
+python -m cad_translator -i test_input/图纸.dwg -t terms.csv -o test_output
+
+# 批量翻译
+python -m cad_translator -d test_input -t terms.csv -o test_output
+
+# 使用硅基流动（需在 .env 配置 SILICONFLOW_API_KEY）
+python -m cad_translator -i 图纸.dwg -t terms.csv -o test_output --api siliconflow
+```
+
+**关键参数：**
+| 参数 | 作用 |
+|------|------|
+| `-i` / `-d` | 单文件或批量目录 |
+| `-t` | 术语表 CSV |
+| `-o` | 输出目录 |
+| `--api` | 翻译引擎：`baidu`（默认）、`siliconflow`、`null`（仅术语表） |
+| `-m bilingual` | 双语模式（默认 replace） |
+| `--skip-odafc` | 输入已是 DXF 时跳过转换 |
+
 ## 构建与测试
 - Python 版本: 3.10+
 - 安装依赖: `pip install -e ".[dev]"` 或 `pip install -r requirements.txt`

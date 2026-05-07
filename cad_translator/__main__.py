@@ -112,8 +112,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--api",
         choices=["null", "baidu", "siliconflow"],
-        default="null",
-        help="翻译 API 类型（默认: null=仅术语表）",
+        default="baidu",
+        help="翻译 API 类型（默认: baidu=百度云，可选: null, siliconflow）",
     )
     parser.add_argument(
         "--baidu-api-key",

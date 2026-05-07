@@ -1,0 +1,343 @@
+﻿handle,original,translated,source
+5DBCE9,4.本图平面曲线要素另见道路专业有关图纸。,4. The planar curve elements in this diagram can be found in the relevant drawings of the road discipline.,baidu_cloud
+5DBCEA,3.伸缩缝和排水孔预留位置另见详图。,3. The reserved positions for expansion joints and drainage holes are shown in the detailed drawings.,baidu_cloud
+5DBCEB,2.本图须与桥梁总体布置图、小箱梁构造图配合使用。,2. This drawing must be used in conjunction with the overall layout of the bridge and the structural drawing of the small box girder.,baidu_cloud
+5DBCEC,1.本图尺寸单位除桩号以米计外，余均以毫米计。,"1. The dimensions in this drawing are measured in millimeters, except for pile numbers which are measured in meters.",baidu_cloud
+5DBCED,附注,Note,baidu_cloud
+5DBCEE,5.小箱梁梁底支座型号另见下部盖梁图纸。,"5. For the model of the bottom support of the small box girder, please refer to the lower cover beam drawing.",baidu_cloud
+5DBCEF,6.本图所示方向均为沿主线道路设计中心线桩号前进方向布置。,6. The directions shown in this diagram are arranged along the direction of the main road design centerline pile number.,baidu_cloud
+5DBCF0,7.小箱梁现浇中横梁部分未在图中表示，详见小箱梁构造图。,7. The crossbeam part of the cast-in-place small box girder is not shown in the diagram. Please refer to the structural diagram of the small box girder for details.,baidu_cloud
+5DBD16,非连续端立面示意图,Non continuous end elevation diagram,baidu_cloud
+5DBD1B,盖梁,cap beam,baidu_cloud
+5DBD47,小箱梁,Small box girder,baidu_cloud
+5DBD4D,非连续端,Non continuous end,baidu_cloud
+5DBD53,8.小箱梁非连续端当纵坡 | i |>1%%%时立面梁端修正角γ需作修正;,"When the longitudinal slope | i |>1%%% at the discontinuous end of the small box girder, the vertical beam end correction angle γ needs to be corrected;",baidu_cloud
+5DBD54,"当纵坡 | i |>3%%%时梁长需作修正,梁长调整长度为L/cosγ。","When the longitudinal slope | i |>3%%, the beam length needs to be corrected, and the adjustment length of the beam length is L/cos γ.",baidu_cloud
+5DE509,边跨边支座布置图,Layout of side span and side support,baidu_cloud
+5DE510,支座中心线,Support centerline,baidu_cloud
+5DE515,(仅示外边梁),(Only showing the outer beam),baidu_cloud
+5DE516,中跨支座布置图,Layout of mid span supports,baidu_cloud
+5DE51A,(仅示中梁),(Only showing the middle beam),baidu_cloud
+5DE525,支座中心线,Support centerline,baidu_cloud
+5DE529,4.本图平面曲线要素另见道路专业有关图纸。,4. The planar curve elements in this diagram can be found in the relevant drawings of the road discipline.,baidu_cloud
+5DE52A,3.伸缩缝和排水孔预留位置另见详图。,3. The reserved positions for expansion joints and drainage holes are shown in the detailed drawings.,baidu_cloud
+5DE52B,2.本图须与桥梁总体布置图、小箱梁构造图配合使用。,2. This drawing must be used in conjunction with the overall layout of the bridge and the structural drawing of the small box girder.,baidu_cloud
+5DE52C,1.本图尺寸单位除桩号以米计外，余均以毫米计。,"1. The dimensions in this drawing are measured in millimeters, except for pile numbers which are measured in meters.",baidu_cloud
+5DE52D,附注,Note,baidu_cloud
+5DE52E,5.小箱梁梁底支座型号另见下部盖梁图纸。,"5. For the model of the bottom support of the small box girder, please refer to the lower cover beam drawing.",baidu_cloud
+5DE52F,6.本图所示方向均为沿主线道路设计中心线桩号前进方向布置。,6. The directions shown in this diagram are arranged along the direction of the main road design centerline pile number.,baidu_cloud
+5DE530,7.小箱梁现浇中横梁部分未在图中表示，详见小箱梁构造图。,7. The crossbeam part of the cast-in-place small box girder is not shown in the diagram. Please refer to the structural diagram of the small box girder for details.,baidu_cloud
+5DFDB3,4.本图平面曲线要素另见道路专业有关图纸。,4. The planar curve elements in this diagram can be found in the relevant drawings of the road discipline.,baidu_cloud
+5DFDB4,3.伸缩缝和排水孔预留位置另见详图。,3. The reserved positions for expansion joints and drainage holes are shown in the detailed drawings.,baidu_cloud
+5DFDB5,2.本图须与桥梁总体布置图、小箱梁构造图配合使用。,2. This drawing must be used in conjunction with the overall layout of the bridge and the structural drawing of the small box girder.,baidu_cloud
+5DFDB6,1.本图尺寸单位除桩号以米计外，余均以毫米计。,"1. The dimensions in this drawing are measured in millimeters, except for pile numbers which are measured in meters.",baidu_cloud
+5DFDB7,附注,Note,baidu_cloud
+5DFDB8,5.小箱梁梁底支座型号另见下部盖梁图纸。,"5. For the model of the bottom support of the small box girder, please refer to the lower cover beam drawing.",baidu_cloud
+5DFDB9,6.本图所示方向均为沿主线道路设计中心线桩号前进方向布置。,6. The directions shown in this diagram are arranged along the direction of the main road design centerline pile number.,baidu_cloud
+5DFDBA,7.小箱梁现浇中横梁部分未在图中表示，详见小箱梁构造图。,7. The crossbeam part of the cast-in-place small box girder is not shown in the diagram. Please refer to the structural diagram of the small box girder for details.,baidu_cloud
+5DFDBB,8.小箱梁非连续端当纵坡 | i |>1%%%时立面梁端修正角γ需作修正;,"When the longitudinal slope | i |>1%%% at the discontinuous end of the small box girder, the vertical beam end correction angle γ needs to be corrected;",baidu_cloud
+5DFDBC,"当纵坡 | i |>3%%%时梁长需作修正,梁长调整长度为L/cosγ。","When the longitudinal slope | i |>3%%, the beam length needs to be corrected, and the adjustment length of the beam length is L/cos γ.",baidu_cloud
+5EF877,非连续端立面示意图,Non continuous end elevation diagram,baidu_cloud
+5EF87C,盖梁,cap beam,baidu_cloud
+5EF8A8,小箱梁,Small box girder,baidu_cloud
+5EF8AA,非连续端,Non continuous end,baidu_cloud
+5F0948,现浇段,Cast in place section,baidu_cloud
+5F0949,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F094A,（中跨边梁）,(Mid span side beam),baidu_cloud
+5F094C,现浇段,Cast in place section,baidu_cloud
+5F094D,现浇段,Cast in place section,baidu_cloud
+5F094E,现浇段,Cast in place section,baidu_cloud
+5F094F,现浇段,Cast in place section,baidu_cloud
+5F0950,现浇段,Cast in place section,baidu_cloud
+5F0951,现浇段,Cast in place section,baidu_cloud
+5F0952,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F0953,（中跨边梁）,(Mid span side beam),baidu_cloud
+5F0955,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F0956,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F0958,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F0959,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F095B,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F095C,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F095E,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F095F,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F0961,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F0962,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F0964,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F0965,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F099C,边梁边线1,Edge beam edge 1,baidu_cloud
+5F099F,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F09A2,边梁边线2,Edge beam edge line 2,baidu_cloud
+5F09A5,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F09A8,横隔板中心线,Horizontal partition centerline,baidu_cloud
+5F09AC,道路设计中心线,Road design centerline,baidu_cloud
+5F0E0E,小箱梁平面布置图,Layout plan of small box girder,baidu_cloud
+5F14B4,现浇段,Cast in place section,baidu_cloud
+5F14B5,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14B6,（边跨边梁）,(Side span side beam),baidu_cloud
+5F14B8,现浇段,Cast in place section,baidu_cloud
+5F14B9,现浇段,Cast in place section,baidu_cloud
+5F14BA,现浇段,Cast in place section,baidu_cloud
+5F14BB,现浇段,Cast in place section,baidu_cloud
+5F14BC,现浇段,Cast in place section,baidu_cloud
+5F14BD,现浇段,Cast in place section,baidu_cloud
+5F14BE,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14BF,（边跨边梁）,(Side span side beam),baidu_cloud
+5F14C1,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14C2,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14C4,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14C5,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14C7,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14C8,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14CA,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14CB,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14CD,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14CE,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14D0,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F14D1,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F14D4,边梁边线1,Edge beam edge 1,baidu_cloud
+5F14D7,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F14DA,边梁边线2,Edge beam edge line 2,baidu_cloud
+5F14DD,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F14E0,横隔板中心线,Horizontal partition centerline,baidu_cloud
+5F14E3,道路设计中心线,Road design centerline,baidu_cloud
+5F14ED,小箱梁平面布置图,Layout plan of small box girder,baidu_cloud
+5F1B90,边跨边支座布置图,Layout of side span and side support,baidu_cloud
+5F1B97,支座中心线,Support centerline,baidu_cloud
+5F1B9C,(仅示外边梁),(Only showing the outer beam),baidu_cloud
+5F1B9D,中跨支座布置图,Layout of mid span supports,baidu_cloud
+5F1BA1,(仅示中梁),(Only showing the middle beam),baidu_cloud
+5F1BAC,支座中心线,Support centerline,baidu_cloud
+5F2281,现浇段,Cast in place section,baidu_cloud
+5F2282,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F2283,（边跨边梁）,(Side span side beam),baidu_cloud
+5F2285,现浇段,Cast in place section,baidu_cloud
+5F2286,现浇段,Cast in place section,baidu_cloud
+5F2287,现浇段,Cast in place section,baidu_cloud
+5F2288,现浇段,Cast in place section,baidu_cloud
+5F2289,现浇段,Cast in place section,baidu_cloud
+5F228A,现浇段,Cast in place section,baidu_cloud
+5F228B,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F228C,（边跨边梁）,(Side span side beam),baidu_cloud
+5F228E,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F228F,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F2291,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F2292,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F2294,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F2295,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F2297,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F2298,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F229A,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F229B,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F229D,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F229E,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F22A1,边梁边线1,Edge beam edge 1,baidu_cloud
+5F22A4,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F22A7,边梁边线2,Edge beam edge line 2,baidu_cloud
+5F22AA,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F22AD,横隔板中心线,Horizontal partition centerline,baidu_cloud
+5F22B0,道路设计中心线,Road design centerline,baidu_cloud
+5F22BA,小箱梁平面布置图,Layout plan of small box girder,baidu_cloud
+5F2BFE,边跨边支座布置图,Layout of side span and side support,baidu_cloud
+5F2C05,支座中心线,Support centerline,baidu_cloud
+5F2C0A,(仅示外边梁),(Only showing the outer beam),baidu_cloud
+5F2C0B,中跨支座布置图,Layout of mid span supports,baidu_cloud
+5F2C0F,(仅示中梁),(Only showing the middle beam),baidu_cloud
+5F2C1A,支座中心线,Support centerline,baidu_cloud
+5F336F,道路设计中心线,Road design centerline,baidu_cloud
+5F368B,边梁边线1,Edge beam edge 1,baidu_cloud
+5F368E,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F3691,边梁边线2,Edge beam edge line 2,baidu_cloud
+5F3694,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F3696,小箱梁平面布置图,Layout plan of small box girder,baidu_cloud
+5F369F,横隔板中心线,Horizontal partition centerline,baidu_cloud
+5F36D3,现浇段,Cast in place section,baidu_cloud
+5F36D4,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F36D5,（边跨边梁）,(Side span side beam),baidu_cloud
+5F36D7,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F36D8,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F370C,现浇段,Cast in place section,baidu_cloud
+5F370D,现浇段,Cast in place section,baidu_cloud
+5F370E,现浇段,Cast in place section,baidu_cloud
+5F370F,现浇段,Cast in place section,baidu_cloud
+5F3710,现浇段,Cast in place section,baidu_cloud
+5F3711,现浇段,Cast in place section,baidu_cloud
+5F3712,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F3714,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F3716,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F3718,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F371A,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F371C,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F371E,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F371F,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F3720,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F3721,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F3722,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F3723,（边跨边梁）,(Side span side beam),baidu_cloud
+5F37CA,4.本图平面曲线要素另见道路专业有关图纸。,4. The planar curve elements in this diagram can be found in the relevant drawings of the road discipline.,baidu_cloud
+5F37CB,3.伸缩缝和排水孔预留位置另见详图。,3. The reserved positions for expansion joints and drainage holes are shown in the detailed drawings.,baidu_cloud
+5F37CC,2.本图须与桥梁总体布置图、小箱梁构造图配合使用。,2. This drawing must be used in conjunction with the overall layout of the bridge and the structural drawing of the small box girder.,baidu_cloud
+5F37CD,1.本图尺寸单位除桩号以米计外，余均以毫米计。,"1. The dimensions in this drawing are measured in millimeters, except for pile numbers which are measured in meters.",baidu_cloud
+5F37CE,附注,Note,baidu_cloud
+5F37CF,5.小箱梁梁底支座型号另见下部盖梁图纸。,"5. For the model of the bottom support of the small box girder, please refer to the lower cover beam drawing.",baidu_cloud
+5F37D0,6.本图所示方向均为沿主线道路设计中心线桩号前进方向布置。,6. The directions shown in this diagram are arranged along the direction of the main road design centerline pile number.,baidu_cloud
+5F37D1,7.小箱梁现浇中横梁部分未在图中表示，详见小箱梁构造图。,7. The crossbeam part of the cast-in-place small box girder is not shown in the diagram. Please refer to the structural diagram of the small box girder for details.,baidu_cloud
+5F37DF,非连续端立面示意图,Non continuous end elevation diagram,baidu_cloud
+5F37E4,盖梁,cap beam,baidu_cloud
+5F3810,小箱梁,Small box girder,baidu_cloud
+5F3812,非连续端,Non continuous end,baidu_cloud
+5F3814,8.小箱梁非连续端当纵坡 | i |>1%%%时立面梁端修正角γ需作修正;,"When the longitudinal slope | i |>1%%% at the discontinuous end of the small box girder, the vertical beam end correction angle γ needs to be corrected;",baidu_cloud
+5F3815,"当纵坡 | i |>3%%%时梁长需作修正,梁长调整长度为L/cosγ。","When the longitudinal slope | i |>3%%, the beam length needs to be corrected, and the adjustment length of the beam length is L/cos γ.",baidu_cloud
+5F3818,边跨边支座布置图,Layout of side span and side support,baidu_cloud
+5F381F,支座中心线,Support centerline,baidu_cloud
+5F3824,(仅示外边梁),(Only showing the outer beam),baidu_cloud
+5F3825,中跨支座布置图,Layout of mid span supports,baidu_cloud
+5F3829,(仅示中梁),(Only showing the middle beam),baidu_cloud
+5F3834,支座中心线,Support centerline,baidu_cloud
+5F4003,边梁边线1,Edge beam edge 1,baidu_cloud
+5F4006,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F4009,边梁边线2,Edge beam edge line 2,baidu_cloud
+5F400C,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F400E,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F400F,（中跨边梁）,(Mid span side beam),baidu_cloud
+5F4011,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F4012,（中跨边梁）,(Mid span side beam),baidu_cloud
+5F4014,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F4015,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F4017,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F4018,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F401A,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F401B,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F401D,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F401E,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F4020,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F4021,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F4023,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F4024,（中跨中梁）,(Mid span mid beam),baidu_cloud
+5F4026,现浇段,Cast in place section,baidu_cloud
+5F4027,现浇段,Cast in place section,baidu_cloud
+5F4028,现浇段,Cast in place section,baidu_cloud
+5F4029,现浇段,Cast in place section,baidu_cloud
+5F402A,现浇段,Cast in place section,baidu_cloud
+5F402B,现浇段,Cast in place section,baidu_cloud
+5F402C,现浇段,Cast in place section,baidu_cloud
+5F409F,横隔板中心线,Horizontal partition centerline,baidu_cloud
+5F40A1,小箱梁平面布置图,Layout plan of small box girder,baidu_cloud
+5F40A6,道路设计中心线,Road design centerline,baidu_cloud
+5F423E,边跨边支座布置图,Layout of side span and side support,baidu_cloud
+5F4245,支座中心线,Support centerline,baidu_cloud
+5F424A,(仅示外边梁),(Only showing the outer beam),baidu_cloud
+5F424B,中跨支座布置图,Layout of mid span supports,baidu_cloud
+5F424F,(仅示中梁),(Only showing the middle beam),baidu_cloud
+5F425A,支座中心线,Support centerline,baidu_cloud
+5F425E,4.本图平面曲线要素另见道路专业有关图纸。,4. The planar curve elements in this diagram can be found in the relevant drawings of the road discipline.,baidu_cloud
+5F425F,3.伸缩缝和排水孔预留位置另见详图。,3. The reserved positions for expansion joints and drainage holes are shown in the detailed drawings.,baidu_cloud
+5F4260,2.本图须与桥梁总体布置图、小箱梁构造图配合使用。,2. This drawing must be used in conjunction with the overall layout of the bridge and the structural drawing of the small box girder.,baidu_cloud
+5F4261,1.本图尺寸单位除桩号以米计外，余均以毫米计。,"1. The dimensions in this drawing are measured in millimeters, except for pile numbers which are measured in meters.",baidu_cloud
+5F4262,附注,Note,baidu_cloud
+5F4263,5.小箱梁梁底支座型号另见下部盖梁图纸。,"5. For the model of the bottom support of the small box girder, please refer to the lower cover beam drawing.",baidu_cloud
+5F4264,6.本图所示方向均为沿主线道路设计中心线桩号前进方向布置。,6. The directions shown in this diagram are arranged along the direction of the main road design centerline pile number.,baidu_cloud
+5F4265,7.小箱梁现浇中横梁部分未在图中表示，详见小箱梁构造图。,7. The crossbeam part of the cast-in-place small box girder is not shown in the diagram. Please refer to the structural diagram of the small box girder for details.,baidu_cloud
+5F5C21,横隔板中心线,Horizontal partition centerline,baidu_cloud
+5F5C23,小箱梁平面布置图,Layout plan of small box girder,baidu_cloud
+5F5C5D,边梁边线2,Edge beam edge line 2,baidu_cloud
+5F5C60,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F5C63,边梁边线1,Edge beam edge 1,baidu_cloud
+5F5C66,边梁挑臂根部下缘线,Bottom edge line of edge beam cantilever arm root,baidu_cloud
+5F5C69,道路设计中心线,Road design centerline,baidu_cloud
+5F5C6B,4.本图平面曲线要素另见道路专业有关图纸。,4. The planar curve elements in this diagram can be found in the relevant drawings of the road discipline.,baidu_cloud
+5F5C6C,3.伸缩缝和排水孔预留位置另见详图。,3. The reserved positions for expansion joints and drainage holes are shown in the detailed drawings.,baidu_cloud
+5F5C6D,2.本图须与桥梁总体布置图、小箱梁构造图配合使用。,2. This drawing must be used in conjunction with the overall layout of the bridge and the structural drawing of the small box girder.,baidu_cloud
+5F5C6E,1.本图尺寸单位除桩号以米计外，余均以毫米计。,"1. The dimensions in this drawing are measured in millimeters, except for pile numbers which are measured in meters.",baidu_cloud
+5F5C6F,附注,Note,baidu_cloud
+5F5C70,5.小箱梁梁底支座型号另见下部盖梁图纸。,"5. For the model of the bottom support of the small box girder, please refer to the lower cover beam drawing.",baidu_cloud
+5F5C71,6.本图所示方向均为沿主线道路设计中心线桩号前进方向布置。,6. The directions shown in this diagram are arranged along the direction of the main road design centerline pile number.,baidu_cloud
+5F5C72,7.小箱梁现浇中横梁部分未在图中表示，详见小箱梁构造图。,7. The crossbeam part of the cast-in-place small box girder is not shown in the diagram. Please refer to the structural diagram of the small box girder for details.,baidu_cloud
+5F5C73,8.小箱梁非连续端当纵坡 | i |>1%%%时立面梁端修正角γ需作修正;,"When the longitudinal slope | i |>1%%% at the discontinuous end of the small box girder, the vertical beam end correction angle γ needs to be corrected;",baidu_cloud
+5F5C74,"当纵坡 | i |>3%%%时梁长需作修正,梁长调整长度为L/cosγ。","When the longitudinal slope | i |>3%%, the beam length needs to be corrected, and the adjustment length of the beam length is L/cos γ.",baidu_cloud
+5F5C82,非连续端立面示意图,Non continuous end elevation diagram,baidu_cloud
+5F5C87,盖梁,cap beam,baidu_cloud
+5F5CB0,小箱梁,Small box girder,baidu_cloud
+5F5CB2,非连续端,Non continuous end,baidu_cloud
+5F5CB6,边跨边支座布置图,Layout of side span and side support,baidu_cloud
+5F5CBD,支座中心线,Support centerline,baidu_cloud
+5F5CC2,(仅示外边梁),(Only showing the outer beam),baidu_cloud
+5F5CC3,中跨支座布置图,Layout of mid span supports,baidu_cloud
+5F5CC7,(仅示中梁),(Only showing the middle beam),baidu_cloud
+5F5CD2,支座中心线,Support centerline,baidu_cloud
+5F5D61,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F5D62,（边跨边梁）,(Side span side beam),baidu_cloud
+5F5D64,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F5D65,（边跨边梁）,(Side span side beam),baidu_cloud
+5F5D67,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F5D68,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F5D6A,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F5D6B,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F5D6D,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F5D6E,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F5D70,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F5D71,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F5D73,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F5D74,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F5D76,预制小箱梁,Prefabricated small box girder,baidu_cloud
+5F5D77,（边跨中梁）,(Side span middle beam),baidu_cloud
+5F5D79,现浇段,Cast in place section,baidu_cloud
+5F5D7A,现浇段,Cast in place section,baidu_cloud
+5F5D7B,现浇段,Cast in place section,baidu_cloud
+5F5D7C,现浇段,Cast in place section,baidu_cloud
+5F5D7D,现浇段,Cast in place section,baidu_cloud
+5F5D7E,现浇段,Cast in place section,baidu_cloud
+5F5D7F,现浇段,Cast in place section,baidu_cloud
+5EFCAE,"H=1.6m,B=25.5m小箱梁平面布置图(一)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (Part 1),baidu_cloud
+5EFCB0,"H=1.6m,B=25.5m小箱梁平面布置图(二)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (II),baidu_cloud
+5EFCB2,"H=1.6m,B=25.5m小箱梁平面布置图(三)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (III),baidu_cloud
+5F37C0,"H=1.6m,B=25.5m小箱梁平面布置图(四)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (Part 4),baidu_cloud
+5F5148,"H=1.6m,B=25.5m小箱梁平面布置图(五)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (V),baidu_cloud
+5F514F,"H=1.6m,B=25.5m小箱梁平面布置图(六)",Layout Plan of Small Box Beam with H=1.6m and B=25.5m (VI),baidu_cloud
+5F60A5,项目名称,Project Name,term_table
+5F60A6,子项名称,Sub-Project,term_table
+5F60A8,项目编号,Project No.,term_table
+5F60C7,专业负责人,Discipline Responsible,term_table
+5F60C9,设计总负责人,Principal in Charge,term_table
+5F60CB,校 对,proofread,baidu_cloud
+5F60CD,审 核,"review, audit",baidu_cloud
+5F60D0,审 定,Approved,baidu_cloud
+5F60D2,比  例,proportion,baidu_cloud
+5F60D4,设 计,design,baidu_cloud
+5F60D6,绘 图,mapping,baidu_cloud
+5F60D9,图  号,Sheet No.,term_table
+5F60DB,专  业,Discipline,term_table
+5F60DC,图纸名称,Sheet Title,term_table
+5F60E2, 阶  段, Stage,term_table
+5F60E4,版  次,Rev.,term_table
+5F6120,同济大学建筑设计研究院,Architectural Design & Research Institute of Tongji University,term_table
+5F6121, 集团 有限公司,Group Limited Company,baidu_cloud
+5F6126,子项编号,Sub-Project No.,term_table
+5F612D,结 构,Structure,term_table
+5F612F,建 筑,Architecture,term_table
+5F6134,会 签,Countersign,term_table
+5F6136,桥 梁,Bridge,baidu_cloud
+5F6138,道 路,road,baidu_cloud
+5F6149,环 境,environment,baidu_cloud
+5F614B,给排水,Plumbing,term_table
+5F614D,信 息,information,baidu_cloud
+5F614F,交 通,Transportation,baidu_cloud
+5F6151,强 电,Power Supply,term_table
+5F6153,景 观,Scenery,baidu_cloud
+5F6155,动 力,Power,term_table
+5F6157,暖 通,HVAC,term_table
+5F6159,日 期,date,baidu_cloud
+5F615B,执业签章,Registration Stamp,term_table
+5F615F,出图签章,Release Stamp,term_table
+5F6164,"本图须加盖出图签章,否则一律无效","本图须加盖Release Stamp,否则一律无效",term_table
+5F6176,见图示,See the illustration,baidu_cloud
+5F6178,桥梁,bridge,baidu_cloud
+5F617A,鄞州大道快速路（机场路—鄞横线）工程设计Ⅰ标,Design Section I of Yinzhou Avenue Expressway (Airport Road Yinheng Line) Project,baidu_cloud
+5F617C,施工图,Construction Drawing,term_table
+5F6180,施工I标段,Construction Section I,baidu_cloud
+5F6181,李映,Li Ying,baidu_cloud
+5F6182,郑润清,Zheng Runqing,baidu_cloud
+5F6183,郑润清,Zheng Runqing,baidu_cloud
+5F6FEA,唐虎翔,Tang Huxiang,baidu_cloud
+5F81C4,陈何峰,Chen Hefeng,baidu_cloud
+5F81C5,"王安民,蒋相华","Wang Anmin, Jiang Xianghua",baidu_cloud
+5F81C6,"曹沛,王安民","Cao Pei, Wang Anmin",baidu_cloud

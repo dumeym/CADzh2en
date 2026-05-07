@@ -16,3 +16,4 @@ profiling/logs
 venv
 wheels
 .env
+.msi

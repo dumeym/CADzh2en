@@ -7,6 +7,8 @@ from __future__ import annotations
 
 import os
 import logging
+import shutil
+import tempfile
 from pathlib import Path
 from typing import Optional
 
@@ -48,7 +50,20 @@ def dwg_to_dxf(input_path: str | os.PathLike, output_dir: str | os.PathLike) -> 
     dst = out_dir / src.with_suffix(".dxf").name
 
     logger.info(f"正在转换 DWG→DXF: {src.name}")
-    doc = odafc.readfile(str(src))
+
+    # ODAFC 对含特殊字符或非 ASCII 路径处理有问题，通过临时路径规避
+    if not src.name.isascii():
+        logger.info("文件名含非 ASCII 字符，使用临时路径转换")
+        tmpdir = tempfile.mkdtemp(prefix="dwg_")
+        tmp_src = Path(tmpdir) / "input.dwg"
+        tmp_dxf = Path(tmpdir) / "input.dxf"
+        shutil.copy2(str(src), str(tmp_src))
+        odafc.convert(str(tmp_src), str(tmp_dxf))
+        doc = ezdxf.readfile(str(tmp_dxf))
+        shutil.rmtree(tmpdir, ignore_errors=True)
+    else:
+        doc = odafc.readfile(str(src))
+
     doc.saveas(str(dst))
     logger.info(f"转换完成: {dst}")
     return str(dst)
